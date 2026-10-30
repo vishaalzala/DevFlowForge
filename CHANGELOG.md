@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0] - 2026-10-30
+- Added 47 independently written skills (30 → 77), especially product/design, UX research, Figma handoff, accessibility, web/mobile, backend, distributed systems, observability, infrastructure, AI and quality workflows.
+- Added a complete linkable skill catalog, skill selection guide and research/coverage audit.
+- Reworked the README to describe design and engineering workflows, installation, usage, limits and evidence requirements.
+- Updated version metadata, test validation and project-agnostic legacy wording.
+
+
 ## 0.4.0 — 2026-10-30
 - Renamed the public toolkit to **DevFlowForge** with independent branding.
 - Updated the repository marketplace, manifests, documentation, examples and install instructions.

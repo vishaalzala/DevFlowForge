@@ -10,3 +10,9 @@ Thank you for helping improve DevFlowForge, created by Vishaal Zala.
 6. Run `python scripts/validate_plugin.py`, update `CHANGELOG.md` when appropriate and open a PR.
 
 The maintainer may request additional tests or revisions before accepting changes.
+
+## Before proposing another skill
+1. Search [SKILLS.md](SKILLS.md) for overlap; prefer improving an existing skill when it has the same outcome.
+2. Write a narrow `description` trigger, actionable workflow and observable deliverable; avoid filler and duplicating instructions from another repo.
+3. Include one positive, one negative and one ambiguous usage example, and explain how the result would be checked.
+4. Update the catalog, routing guidance and tests, run `python scripts/validate_plugin.py`, and document limitations in the PR.

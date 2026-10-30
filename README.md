@@ -2,123 +2,97 @@
 
 <div align="center">
 
-![DevFlowForge visual overview: Discover, Investigate, Plan, Implement, Test, Review, Ship](assets/devflowforge-overview.svg)
-
-*From understanding an unfamiliar codebase to shipping a reviewed change — a repeatable workflow powered by 30 focused engineering skills.*
-
-</div>
+![DevFlowForge development workflow: Discover, Investigate, Plan, Implement, Test, Review and Ship](assets/devflowforge-overview.svg)
 
 **Build thoughtfully. Test confidently. Ship safely.**
 
-**DevFlowForge** is an open-source collection of **30 reusable engineering skills** for AI coding assistants. It helps developers apply repeatable workflows—**Discover → Investigate → Plan → Implement → Test → Review → Ship**—to any software project.
+</div>
 
-**Created by Vishaal Zala** · MIT License · Version 0.4.0
+**DevFlowForge** is an open-source collection of **77 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-DevFlowForge is designed to be **project-agnostic**. Use it for web apps, APIs, mobile applications, SaaS products, command-line tools, open-source libraries, AI systems, data projects, and infrastructure. The assistant should inspect the actual repository and select only relevant skills; no particular language, hosting provider, or platform is required.
+**Version 0.5.0 · 77 skills · MIT License**
 
-> **Important:** DevFlowForge provides instructions and review checklists, not a hosted AI model, independent coding agents, background workers, or automatic access to repositories. File edits, tests, deployments and pull requests require compatible tools, connected accounts and permission. Skill inclusion never guarantees a correct or secure result.
+> DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
-## Quick start
+## What can it help with?
 
-### Option A — Codex CLI (repository marketplace)
+| Area | Examples |
+|---|---|
+| **Product & research** | User interviews, journeys, product specs, UX copy, prioritization, experiments |
+| **Design & UI/UX** | Brand identity, design systems, wireframes, Figma handoffs, visual critique, mobile UX, dashboards, landing pages, design-to-code |
+| **Frontend & apps** | React/Vue/other web architectures, forms, async state, accessibility, native mobile apps, CLI UX, browser tests |
+| **Backend & data** | APIs, authentication, databases, ETL, realtime events, caches, privacy, distributed services |
+| **Quality & security** | Unit/integration/E2E tests, WCAG-oriented audits, contract testing, dependency reviews, security safeguards |
+| **Delivery & operations** | Git workflows, CI/CD, feature flags, IaC, containers, costs, performance tracing, recovery and SLOs |
+| **AI & agents** | AI evaluation, retrieval systems, agent-tool safeguards, prompt quality and skill testing |
 
-After the **public repository has been published** on GitHub, run on a compatible Codex CLI version:
+## How to use DevFlowForge
+
+1. Open the **actual project** in a compatible assistant or connect the repository using an authorised tool.
+2. Ask for a concrete task and (optionally) name one skill by its directory name, such as `ui-ux-design`.
+3. The assistant should discover the project stack, select **only relevant skills**, and explain any missing tool access.
+4. Review the proposed design/plan, verify tests and approve sensitive or production operations explicitly.
+
+**Example requests**
+
+- **Design:** “Use `ui-ux-design`, `design-systems-tokens` and `wireframing-prototyping` to propose a responsive dashboard. Include empty/error states and accessibility.”
+- **Design to code:** “Use `figma-design-handoff` and `design-to-code-implementation` to map an approved design to the existing components, then run browser visual regression checks.”
+- **Bug fix:** “Use `root-cause-debugging` to reproduce the failure; propose the smallest patch, add a regression test, and open a reviewable PR.”
+- **Performance:** “Use `web-vitals-performance-audit` to measure LCP, INP and CLS, compare a baseline, and recommend fixes supported by the measurements.”
+- **Backend:** “Use `api-contract-versioning` and `authentication-session-security` to review this integration. Identify breaking changes and negative-access tests.”
+- **AI project:** “Use `prompt-rag-retrieval-evaluation` to define groundedness tests and error slices for a retrieval feature.”
+- **Deployment:** “Use `feature-flags-progressive-rollout` and `ci-cd-release-safety` to prepare a staged rollout, monitoring and rollback plan.”
+
+## Installation
+
+### Codex CLI / native plugin marketplace
+
+On a version of Codex that supports repository plugin marketplaces:
 
 ```bash
-codex plugin marketplace add vishaalzala/devflowforge
-codex plugin marketplace list
+codex plugin marketplace add vishaalzala/DevFlowForge
 codex plugin add devflowforge@devflowforge
 codex plugin list --json
 ```
 
-The repository contains `.agents/plugins/marketplace.json` and a portable root `plugin.json`. Codex capabilities and installation commands vary by product version; check the installed Codex CLI help if a command is unavailable. Add only one installation of this plugin per coding environment.
+Verify the commands in `codex plugin --help` for your installed version. The repository includes `plugin.json`, `.codex-plugin/plugin.json` and `.agents/plugins/marketplace.json`. No automated execution or GitHub access is provided by installing skills alone.
 
-### Option B — ChatGPT (web or desktop)
+### ChatGPT
 
-1. Obtain the public GitHub source or the ZIP release of this repository.
-2. In ChatGPT, use **Plugins** or a supported personal-plugin creation flow to create/install a skills-only plugin from the downloaded source, when available for your account.
-3. Open a conversation and select **DevFlowForge**, or explicitly ask it to use a skill.
-4. Connect GitHub or other development tools separately if you want the assistant to access your code or carry out changes.
+Use a compatible ChatGPT personal plugin installation flow and import the repo package or install the author's DevFlowForge plugin when available to your account. Choose DevFlowForge in a conversation and connect code, design or cloud tools separately. **A GitHub repo is not automatically a public ChatGPT Directory listing.** If installation is unavailable, upload relevant `SKILL.md` files as context for a task.
 
-A public GitHub repository **does not automatically install a ChatGPT plugin** or place it in the public ChatGPT Plugin Directory. Availability of these plugin workflows depends on account and client. If plugin creation isn't available, you can still use an individual `skills/<skill-name>/SKILL.md` as task guidance by attaching or pasting it into a conversation.
-
-### Option C — Use skills directly with a coding assistant
-
-Clone the repository and open your actual project with an AI coding assistant that can read local skill files:
+### Other skills-aware coding assistants
 
 ```bash
-git clone https://github.com/vishaalzala/devflowforge.git
-cd devflowforge
+git clone https://github.com/vishaalzala/DevFlowForge.git
+cd DevFlowForge
 python scripts/validate_plugin.py
 ```
 
-Browse `skills/` and supply an applicable skill file as context, or use your coding assistant's documented project-skills mechanism. This is a fallback, not a guaranteed automatic skill discovery mechanism.
+Use your assistant's documented skills-loader, or supply a specific `skills/<name>/SKILL.md` as instruction context. Auto-discovery varies by host; do not assume every assistant supports these files automatically.
 
-## Example prompts
+## Skill catalog
 
-**Debug an application**
+The root `skills/` directory contains **77 standalone SKILL.md files**. See [SKILL CATALOG](SKILLS.md) for a browsable, grouped table of all skills and direct links. See [Skill routing guide](references/skill-routing.md) for how to combine capabilities without loading everything at once.
 
-> Use DevFlowForge's root-cause debugging workflow. Inspect this repository, reproduce the bug where possible, trace the failing code path, explain the root cause, propose the smallest safe fix, and provide a regression test. Distinguish verified facts from hypotheses.
+## Quality and contribution
 
-**Build a feature**
-
-> Use DevFlowForge to review the existing code and define acceptance criteria. Plan a compatible change, implement it in a branch if authorised, run available tests, perform a security review, and prepare a PR summary. Do not deploy without permission.
-
-**Audit any codebase**
-
-> Use DevFlowForge to map the architecture and stack, then evaluate maintainability, performance, accessibility, security and test coverage. Rank findings by evidence, severity and effort.
-
-**Deploy safely**
-
-> Use DevFlowForge's release safety process. Inspect CI/CD, define staging tests, smoke checks, feature flags and rollback options. Explain remaining risks and obtain approval before deployment.
-
-**AI-assisted development**
-
-> Use DevFlowForge's AI evaluation workflow. Define a dataset, quality metrics, confidence reporting and a human-review process before proposing changes to model prompts or routing.
-
-## Included skills (30)
-
-| Area | Skills |
-| --- | --- |
-| Core planning and repository analysis | `cto-orchestration`, `requirements-acceptance-criteria`, `cross-stack-codebase-onboarding`, `repository-architecture-audit`, `architecture-decisions-tradeoffs` |
-| Coding and quality | `root-cause-debugging`, `safe-implementation-review`, `unit-integration-e2e-testing`, `maintainability-refactoring`, `project-knowledge-handoff` |
-| Security and reliability | `security-permissions-billing`, `dependency-vulnerability-upgrades`, `monitoring-incident-response`, `ci-cd-release-safety`, `github-pr-lifecycle` |
-| Application development | `frontend-ux-accessibility`, `performance-engineering`, `customer-portal-identity`, `invoice-job-kit-calculations`, `pdf-documents-export`, `offline-first-sync` |
-| APIs, data and jobs | `api-webhook-integrations`, `database-migrations-import`, `background-jobs-idempotency`, `email-delivery-reliability`, `supabase-rls-multi-tenant`, `stripe-billing-integrity` |
-| AI, search and discoverability | `ai-evaluation-human-review`, `crawler-search-systems`, `seo-content-automation` |
-
-The specialist Supabase and Stripe skills are optional and should be used only when those services are part of the project.
-
-## Repository layout
-
-```text
-devflowforge/
-  plugin.json                         # Portable plugin manifest
-  .codex-plugin/plugin.json          # Codex compatibility
-  .agents/plugins/marketplace.json   # Repository marketplace metadata
-  skills/<skill-name>/SKILL.md       # 30 reusable engineering skills
-  references/                        # Project discovery and quality gates
-  scripts/validate_plugin.py         # Structural and basic secrets check
-  .github/workflows/validate.yml     # CI validation on PRs and pushes
-  LICENSE, CHANGELOG.md, CONTRIBUTING.md, SECURITY.md
-```
-
-## Validate and contribute
-
-Run Python 3.10+:
+Run the structural checks:
 
 ```bash
 python scripts/validate_plugin.py
 ```
 
-The validation script checks manifest consistency, skill layout, count and basic secret patterns. **It does not test integration with every model or coding assistant, verify runtime quality, or constitute a security audit.** Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a PR; report security concerns via [SECURITY.md](SECURITY.md).
+The checks validate packaging, names, skill count, basic completeness and limited secret patterns; they are **not** a functional, security or cross-assistant compatibility certification. For contributions, use [CONTRIBUTING.md](CONTRIBUTING.md). Document evidence when claiming a skill improves results, and add activation and nonactivation test prompts.
 
-## Privacy and safety
+## Source research
 
-Never commit credentials, tokens, customer data, private architecture or real production logs. Avoid destructive database operations and production deployments without explicit permission. Do not claim changes, tests or PRs succeeded unless supported by tool results. Keep a rollback path for risky modifications.
+DevFlowForge uses independently authored skills. The expansion was informed by a survey of public repository capabilities, recorded in [Research and coverage](references/research-and-coverage.md). These projects are linked for acknowledgment, not bundled or copied.
 
-## License and author
+## Project independence and privacy
 
-MIT License — see [LICENSE](LICENSE).
+DevFlowForge doesn't contain your source code, private integrations or customer data. Always verify project facts from authorised sources. Never print secrets or publish private environment files. Request approval for destructive operations, financial actions and production deployments. Distinguish observed, tested and proposed results.
 
-**Created and maintained by Vishaal Zala.** Copyright © 2026 Vishaal Zala.
+## Author and license
+
+**Vishaal Zala** · [MIT License](LICENSE) · Copyright © 2026 Vishaal Zala.
