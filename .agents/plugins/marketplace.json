@@ -1,0 +1,21 @@
+{
+  "name": "devflowforge",
+  "interface": {
+    "displayName": "DevFlowForge by Vishaal Zala"
+  },
+  "plugins": [
+    {
+      "name": "devflowforge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/vishaalzala/devflowforge.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: CTO Engineering Orchestration
+  short_description: Plan, execute and verify engineering work
+  default_prompt: Act as CTO for my project. Investigate the current code, make a plan, implement safe changes if authorized and verifiable, then report actual tests and open risks.
+policy:
+  allow_implicit_invocation: true

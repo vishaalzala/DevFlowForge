@@ -1,0 +1,37 @@
+{
+  "name": "devflowforge",
+  "version": "0.4.0",
+  "description": "Universal software-engineering skill toolkit for AI coding assistants: discover, plan, debug, implement, test, review, and ship safely.",
+  "author": {
+    "name": "Vishaal Zala"
+  },
+  "keywords": [
+    "ai-coding",
+    "agent-skills",
+    "software-engineering",
+    "debugging",
+    "testing",
+    "code-review",
+    "architecture",
+    "security",
+    "devops",
+    "performance",
+    "release-management"
+  ],
+  "license": "MIT",
+  "interface": {
+    "displayName": "DevFlowForge",
+    "shortDescription": "30 skills for reliable code",
+    "longDescription": "A universal set of 30 reusable engineering skills for AI coding assistants across software projects and technology stacks. Discovers existing architecture, then guides debugging, implementation, testing, security, performance, integrations and releases. Skills are instructions, not autonomous tool access; actions require connected tools and permission.",
+    "developerName": "Vishaal Zala",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Act as CTO for my project. Inspect the actual repository, clarify the acceptance criteria, propose a safe implementation plan, implement only if authorized, and report verified tests and risks.",
+      "Review this project's architecture, code quality, performance and security. Prioritize findings by impact and give concrete evidence.",
+      "Help debug this regression across my stack. Reproduce the issue, identify the root cause, propose the smallest fix, add regression tests and prepare a reviewed pull request."
+    ]
+  },
+  "skills": "./skills",
+  "repository": "https://github.com/vishaalzala/devflowforge"
+}
