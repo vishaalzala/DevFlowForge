@@ -1,0 +1,22 @@
+# Changelog
+
+## 0.4.0 — 2026-10-30
+- Renamed the public toolkit to **DevFlowForge** with independent branding.
+- Updated the repository marketplace, manifests, documentation, examples and install instructions.
+- Retained all 30 project-agnostic engineering skills and public MIT licensing.
+
+# Changelog
+
+## 0.3.0 — 2026-10-30
+- Repositioned the toolkit for any software project, language and development stack.
+- Updated 26 existing skills and discovery guidance to remove product-specific project context.
+- Added four broadly reusable skills: requirements and acceptance, cross-stack onboarding, architecture decisions, and safe refactoring.
+- Added a public repository marketplace catalog and detailed installation, example prompts and contributor documentation.
+- Unified public and personal-plugin copy under the author's brand.
+
+## 0.2.0 — 2026-10-30
+- Expanded the initial 10 engineering workflows to 26.
+- Added release validation, security guidance and publication documentation.
+
+## 0.1.0 — 2026-10-30
+- Initial CTO engineering workflows.

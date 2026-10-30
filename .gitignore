@@ -1,0 +1,14 @@
+# Local credentials and private project configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.secrets/
+private/
+private-projects.md
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+dist/
