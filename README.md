@@ -10,9 +10,9 @@
 
 </div>
 
-**DevFlowForge** is an open-source collection of **77 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
+**DevFlowForge** is an open-source collection of **80 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.5.0 · 77 skills · MIT License**
+**Version 0.5.0 · 80 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -57,6 +57,18 @@ A skill provides a repeatable approach. The assistant reads the real project, us
 - **AI project:** “Use `prompt-rag-retrieval-evaluation` to define groundedness tests and error slices for a retrieval feature.”
 - **Deployment:** “Use `feature-flags-progressive-rollout` and `ci-cd-release-safety` to prepare a staged rollout, monitoring and rollback plan.”
 
+## Testing-first development workflow
+
+DevFlowForge includes `test-driven-development`, `unit-integration-e2e-testing`, `test-strategy-release-gates` and `authorized-penetration-test-handoff`.
+
+For application behavior changes, use **Red → Green → Refactor**: write a meaningful failing test, implement the smallest fix, then refactor and rerun the affected tests. Unit tests cover individual rules; integration and contract tests cover connections; E2E tests protect important user journeys. Run accessibility, performance and acceptance checks where appropriate.
+
+**Completion gate:** Report each applicable test as **Pass**, **Fail**, **Not run** or **Not applicable**, with actual commands and results. An unrun test is never a pass. Do not claim release readiness while required gates are failing.
+
+**Optional security handoff:** When the project has exposed services or sensitive data, after functional verification ask: **“Would you like to arrange a scoped, authorized penetration test before release?”** Do not begin active scanning without the project owner's explicit authorization and an agreed scope. Performance testing is a separate, existing skill (`load-stress-capacity-testing`) that also requires authorization and safe load limits.
+
+**Example:** “Use DevFlowForge TDD to implement this feature. Show the failing test, apply the smallest fix, run unit, integration and critical end-to-end tests, and give me a release-readiness report. Then ask whether a scoped security assessment makes sense.”
+
 ## Installation
 
 ### Codex CLI / native plugin marketplace
@@ -87,7 +99,7 @@ Use your assistant's documented skills-loader, or supply a specific `skills/<nam
 
 ## Skill catalog
 
-The root `skills/` directory contains **77 standalone SKILL.md files**. See [SKILL CATALOG](SKILLS.md) for a browsable, grouped table of all skills and direct links. See [Skill routing guide](references/skill-routing.md) for how to combine capabilities without loading everything at once.
+The root `skills/` directory contains **80 standalone SKILL.md files**. See [SKILL CATALOG](SKILLS.md) for a browsable, grouped table of all skills and direct links. See [Skill routing guide](references/skill-routing.md) for how to combine capabilities without loading everything at once.
 
 ## Work with SEOForge
 

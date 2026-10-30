@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.6.0] - 2026-10-30
+- Introduced explicit Red-Green-Refactor test-driven development guidance for behavior changes.
+- Expanded risk-based unit, integration, contract, E2E, accessibility and performance test gates with evidence reporting.
+- Added an opt-in, permission-scoped penetration-testing handoff after functional verification; no scans run automatically.
+- Added three independent skills (77 → 80), and updated routing, quality gates, manifests and skill catalog.
+
 ## [0.5.0] - 2026-10-30
 - Added 47 independently written skills (30 → 77), especially product/design, UX research, Figma handoff, accessibility, web/mobile, backend, distributed systems, observability, infrastructure, AI and quality workflows.
 - Added a complete linkable skill catalog, skill selection guide and research/coverage audit.

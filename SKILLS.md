@@ -1,4 +1,4 @@
-# DevFlowForge Skill Catalog — 77 skills
+# DevFlowForge Skill Catalog — 80 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
 
@@ -46,7 +46,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`offline-first-sync`](skills/offline-first-sync/SKILL.md) | Use when planning a PWA or desktop app that allows offline work, local caching, conflict resolution and eventual synchronization |
 | [`pdf-documents-export`](skills/pdf-documents-export/SKILL.md) | Use when generating printable quotes, invoices, statements, service records, repair reports or branded PDFs and exports |
 
-## Architecture, coding and test (14)
+## Architecture, coding and test (16)
 
 | Skill | Use when |
 |---|---|
@@ -57,6 +57,8 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`root-cause-debugging`](skills/root-cause-debugging/SKILL.md) | Use for recurring bugs, UI errors, failed saves, 404s, duplicate inserts, email failures, unexpected permissions, or any request to trace and permanently fix a code defect |
 | [`safe-implementation-review`](skills/safe-implementation-review/SKILL.md) | Use when asked to implement a feature or fix, review or merge a GitHub PR, assess a diff, write tests, safely modify production-facing software, or confirm readiness to ship |
 | [`unit-integration-e2e-testing`](skills/unit-integration-e2e-testing/SKILL.md) | Use when designing or implementing unit, integration, contract or end-to-end tests for features, regressions, APIs and multi-tenant flows |
+| [`test-driven-development`](skills/test-driven-development/SKILL.md) | Use for behavior changes, bug fixes and feature development where failing tests should precede code changes (Red-Green-Refactor) |
+| [`test-strategy-release-gates`](skills/test-strategy-release-gates/SKILL.md) | Use to select unit, integration, contract, end-to-end, accessibility and performance checks, and require evidence before release |
 | [`maintainability-refactoring`](skills/maintainability-refactoring/SKILL.md) | Use when safely simplifying legacy code, removing duplication, reducing technical debt, modularizing code, or improving maintainability without unintended behaviour changes |
 | [`contract-compatibility-testing`](skills/contract-compatibility-testing/SKILL.md) | Use when APIs, events, schemas or shared libraries change and downstream consumers may break |
 | [`git-worktrees-branch-isolation`](skills/git-worktrees-branch-isolation/SKILL.md) | Use when coordinating parallel development, protecting work in progress or preparing a safe PR workflow |
@@ -82,11 +84,12 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`crawler-search-systems`](skills/crawler-search-systems/SKILL.md) | Use for sitemap processing, forum indexing, crawler queues, robots compliance, indexing, search result ranking, cron scheduling, backfills, duplicates and crawl-related performance |
 | [`invoice-job-kit-calculations`](skills/invoice-job-kit-calculations/SKILL.md) | Use when debugging quotes, invoices, job kits, GST-inclusive prices, discounts, duplicate line items, conversion from jobs or PDF totals |
 
-## Security, privacy and reliability (9)
+## Security, privacy and reliability (10)
 
 | Skill | Use when |
 |---|---|
 | [`security-permissions-billing`](skills/security-permissions-billing/SKILL.md) | Use for roles, protected admin routes, RLS, permissions, Auth, reset emails, customer data access, subscription/trial gating, Stripe billing, audit logs, secrets, data leaks, or security reviews |
+| [`authorized-penetration-test-handoff`](skills/authorized-penetration-test-handoff/SKILL.md) | Use after functional validation when a project owner wants to consider a scoped, authorized independent penetration test |
 | [`dependency-vulnerability-upgrades`](skills/dependency-vulnerability-upgrades/SKILL.md) | Use when evaluating library or framework upgrades, vulnerability advisories, security patches, lockfile changes and compatibility risks |
 | [`privacy-data-governance`](skills/privacy-data-governance/SKILL.md) | Use when handling personal information, retention, deletion, consent, audit logs or sensitive data storage |
 | [`observability-slo-error-budgets`](skills/observability-slo-error-budgets/SKILL.md) | Use for logging, distributed tracing, operational dashboards, on-call alerts, SLIs or reliability targets |
