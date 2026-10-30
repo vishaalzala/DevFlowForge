@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "devflowforge",
-  "version": "0.5.0",
-  "description": "77 portable engineering and design skills for AI coding assistants: product discovery, UI/UX, architecture, implementation, testing, security and safe delivery.",
+  "version": "0.6.0",
+  "description": "80 portable product, design and engineering skills for AI coding assistants, including TDD, layered testing and secure release gates.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -24,15 +24,15 @@
     "com.openai": {
       "interface": {
         "displayName": "DevFlowForge",
-        "shortDescription": "77 engineering & design skills",
-        "longDescription": "A cross-stack toolkit of 77 self-contained skills for product discovery, UI/UX and design systems, mobile and web engineering, data, AI, security, testing and reliable releases. Guides competent AI coding assistants; skills do not themselves run commands, produce Figma designs or grant repository permissions.",
+        "shortDescription": "80 engineering & design skills",
+        "longDescription": "A cross-stack toolkit of 80 self-contained skills for product discovery, UI/UX and design systems, mobile and web engineering, data, AI, security, testing and reliable releases. Guides competent AI coding assistants; skills do not themselves run commands, produce Figma designs or grant repository permissions.. Includes TDD, unit/integration/E2E quality gates and approval-based penetration testing handoff.",
         "developerName": "Vishaal Zala",
         "category": "Productivity",
         "capabilities": [],
         "defaultPrompt": [
           "Use DevFlowForge to research the users and design a new accessible SaaS dashboard with wireframes, design tokens and an implementation plan.",
           "Audit this repository across architecture, security, product UX, performance and test coverage. Select only relevant skills and cite evidence.",
-          "Implement this feature safely: inspect the repository, define acceptance scenarios, review design, test, submit a PR and report anything unverified."
+          "Implement this feature using TDD: show a failing test, make the smallest fix, rerun unit and integration checks, and confirm release gates. Offer a scoped, authorized penetration test only if appropriate."
         ]
       }
     }
