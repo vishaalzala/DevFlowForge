@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">DevFlowForge — developer engineering workflow</title>
+<desc id="desc">An open-source toolkit with 30 engineering skills. A seven-stage process: Discover, Investigate, Plan, Implement, Test, Review and Ship. Designed for any codebase with secure, test-driven delivery.</desc>
+<defs>
+ <linearGradient id="background" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#08111D"/><stop offset=".54" stop-color="#11172C"/><stop offset="1" stop-color="#0A1527"/></linearGradient>
+ <linearGradient id="namegradient" x1="0" x2="1"><stop stop-color="#5DDBE7"/><stop offset=".51" stop-color="#83B7FF"/><stop offset="1" stop-color="#B9A0FF"/></linearGradient>
+ <linearGradient id="topline" x1="0" x2="1"><stop stop-color="#5DDBE7"/><stop offset=".49" stop-color="#9A8EFF"/><stop offset="1" stop-color="#F5B6A4"/></linearGradient>
+ <linearGradient id="card" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#1A263A"/><stop offset="1" stop-color="#111C30"/></linearGradient>
+ <radialGradient id="orb"><stop stop-color="#7257DD" stop-opacity=".26"/><stop offset="1" stop-color="#7257DD" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#FFFFFF" stroke-opacity=".035" stroke-width="1"/></pattern>
+</defs>
+<rect width="1600" height="900" rx="32" fill="url(#background)"/>
+<rect width="1600" height="900" rx="32" fill="url(#grid)"/>
+<circle cx="1280" cy="80" r="420" fill="url(#orb)"/>
+<rect x="0" y="0" width="1600" height="9" fill="url(#topline)"/>
+<g opacity=".15" stroke="#8F9BFF" fill="none" stroke-width="2"><path d="M1310 130l35 35-35 35"/><path d="M1375 130l35 35-35 35"/><path d="M1440 130l35 35-35 35"/></g>
+<rect x="68" y="54" width="391" height="43" rx="21.5" fill="#172738" stroke="#345469"/>
+<circle cx="93" cy="75" r="6" fill="#5DDBE7"/>
+<text x="112" y="82" font-size="20" font-family="Arial,Helvetica,sans-serif" font-weight="700" letter-spacing="2" fill="#BAE5E8">OPEN SOURCE  /  30 SKILLS</text>
+<text x="65" y="194" font-family="Arial,Helvetica,sans-serif" font-size="93" letter-spacing="-4" font-weight="800" fill="#F1F6FF">DevFlow</text>
+<text x="466" y="194" font-family="Arial,Helvetica,sans-serif" font-size="93" letter-spacing="-4" font-weight="800" fill="url(#namegradient)">Forge</text>
+<text x="71" y="252" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="500" fill="#C9D8EC">A practical engineering playbook for AI coding assistants.</text>
+<text x="72" y="291" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#94ABC7">Any repository. Any stack. A clearer path from idea to delivery.</text>
+<g transform="translate(1175,64)">
+ <rect width="345" height="216" rx="20" fill="#0A1424" stroke="#34506B" stroke-width="2"/>
+ <rect x="0" y="0" width="345" height="44" rx="20" fill="#1C2A40"/>
+ <rect x="0" y="24" width="345" height="20" fill="#1C2A40"/>
+ <circle cx="25" cy="22" r="6" fill="#F18F94"/><circle cx="46" cy="22" r="6" fill="#EAB966"/><circle cx="67" cy="22" r="6" fill="#72DAAF"/>
+ <text x="94" y="29" font-size="17" font-family="Arial,Helvetica,sans-serif" fill="#A9BDD7">devflowforge / workflow</text>
+ <text x="28" y="89" font-size="23" font-family="Consolas,monospace" fill="#55E3DA">&gt;</text><text x="51" y="89" font-size="21" font-family="Consolas,monospace" fill="#D8E9FF"> understand()</text>
+ <text x="28" y="130" font-size="23" font-family="Consolas,monospace" fill="#55E3DA">&gt;</text><text x="51" y="130" font-size="21" font-family="Consolas,monospace" fill="#D8E9FF"> verify()</text>
+ <text x="28" y="171" font-size="23" font-family="Consolas,monospace" fill="#55E3DA">&gt;</text><text x="51" y="171" font-size="21" font-family="Consolas,monospace" fill="#D8E9FF"> ship_safely()</text>
+</g>
+<path d="M70 321H1530" stroke="#36506D" stroke-width="2"/>
+<text x="71" y="367" font-family="Arial,Helvetica,sans-serif" font-size="21" letter-spacing="3" font-weight="800" fill="#A5B8D3">THE DEVELOPMENT LOOP</text>
+<text x="1518" y="366" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#8199B9">Repeatable by design</text>
+<g>
+ <rect x="67" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="68" y="393" width="192" height="5" rx="3" fill="#49D9DE"/>
+ <text x="87" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#49D9DE">01</text>
+ <rect x="87" y="449" width="68" height="68" rx="17" fill="#49D9DE" fill-opacity=".11" stroke="#49D9DE" stroke-opacity=".30"/>
+ <g transform="translate(102,463)" stroke="#49D9DE" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="16" r="10"/><path d="M23 24 L32 33"/><path d="M9 16 H21"/></g>
+ <text x="87" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Discover</text>
+ <text x="87" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Understand the stack</text>
+ </g><g stroke="#607690" stroke-width="3" stroke-linecap="round"><path d="M266 496h9"/><path d="M271 490l6 6-6 6" fill="none"/></g><g>
+ <rect x="278" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="279" y="393" width="192" height="5" rx="3" fill="#5FB5FF"/>
+ <text x="298" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#5FB5FF">02</text>
+ <rect x="298" y="449" width="68" height="68" rx="17" fill="#5FB5FF" fill-opacity=".11" stroke="#5FB5FF" stroke-opacity=".30"/>
+ <g transform="translate(313,463)" stroke="#5FB5FF" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12 L6 6 M24 12 L30 6 M11 24 L5 28 M25 24 L31 28"/><rect x="10" y="9" width="16" height="23" rx="7"/><path d="M10 17 H26 M14 12 V7 M22 12 V7"/></g>
+ <text x="298" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Investigate</text>
+ <text x="298" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Find the root cause</text>
+ </g><g stroke="#607690" stroke-width="3" stroke-linecap="round"><path d="M477 496h9"/><path d="M482 490l6 6-6 6" fill="none"/></g><g>
+ <rect x="489" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="490" y="393" width="192" height="5" rx="3" fill="#AB91FF"/>
+ <text x="509" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#AB91FF">03</text>
+ <rect x="509" y="449" width="68" height="68" rx="17" fill="#AB91FF" fill-opacity=".11" stroke="#AB91FF" stroke-opacity=".30"/>
+ <g transform="translate(524,463)" stroke="#AB91FF" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="22" height="30" rx="4"/><path d="M14 12 H24 M14 18 H24 M14 24 H20"/><path d="M20 31 L24 35 L32 26"/></g>
+ <text x="509" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Plan</text>
+ <text x="509" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Define a safe change</text>
+ </g><g stroke="#607690" stroke-width="3" stroke-linecap="round"><path d="M688 496h9"/><path d="M693 490l6 6-6 6" fill="none"/></g><g>
+ <rect x="700" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="701" y="393" width="192" height="5" rx="3" fill="#E49BFF"/>
+ <text x="720" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#E49BFF">04</text>
+ <rect x="720" y="449" width="68" height="68" rx="17" fill="#E49BFF" fill-opacity=".11" stroke="#E49BFF" stroke-opacity=".30"/>
+ <g transform="translate(735,463)" stroke="#E49BFF" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10 L5 18 L14 26 M23 10 L32 18 L23 26"/><path d="M20 6 L16 30"/></g>
+ <text x="720" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Implement</text>
+ <text x="720" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Build with intent</text>
+ </g><g stroke="#607690" stroke-width="3" stroke-linecap="round"><path d="M899 496h9"/><path d="M904 490l6 6-6 6" fill="none"/></g><g>
+ <rect x="911" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="912" y="393" width="192" height="5" rx="3" fill="#F6B86E"/>
+ <text x="931" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#F6B86E">05</text>
+ <rect x="931" y="449" width="68" height="68" rx="17" fill="#F6B86E" fill-opacity=".11" stroke="#F6B86E" stroke-opacity=".30"/>
+ <g transform="translate(946,463)" stroke="#F6B86E" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="26" height="29" rx="5"/><path d="M13 13 H26 M13 23 L18 28 L28 17"/></g>
+ <text x="931" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Test</text>
+ <text x="931" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Verify what works</text>
+ </g><g stroke="#607690" stroke-width="3" stroke-linecap="round"><path d="M1110 496h9"/><path d="M1115 490l6 6-6 6" fill="none"/></g><g>
+ <rect x="1122" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="1123" y="393" width="192" height="5" rx="3" fill="#FF8B9E"/>
+ <text x="1142" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#FF8B9E">06</text>
+ <rect x="1142" y="449" width="68" height="68" rx="17" fill="#FF8B9E" fill-opacity=".11" stroke="#FF8B9E" stroke-opacity=".30"/>
+ <g transform="translate(1157,463)" stroke="#FF8B9E" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3 L32 9 V18 Q32 28 19 35 Q6 28 6 18 V9 Z"/><path d="M12 19 L17 24 L26 14"/></g>
+ <text x="1142" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Review</text>
+ <text x="1142" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Check quality &amp; risk</text>
+ </g><g stroke="#607690" stroke-width="3" stroke-linecap="round"><path d="M1321 496h9"/><path d="M1326 490l6 6-6 6" fill="none"/></g><g>
+ <rect x="1333" y="392" width="194" height="207" rx="20" fill="url(#card)" stroke="#34445E" stroke-width="2"/>
+ <rect x="1334" y="393" width="192" height="5" rx="3" fill="#70E1AA"/>
+ <text x="1353" y="433" font-family="Consolas,monospace" font-size="22" font-weight="700" fill="#70E1AA">07</text>
+ <rect x="1353" y="449" width="68" height="68" rx="17" fill="#70E1AA" fill-opacity=".11" stroke="#70E1AA" stroke-opacity=".30"/>
+ <g transform="translate(1368,463)" stroke="#70E1AA" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 32 V9 M10 18 L19 9 L28 18"/><path d="M7 26 V33 Q7 35 10 35 H28 Q31 35 31 32 V26"/></g>
+ <text x="1353" y="554" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" fill="#EEF4FF">Ship</text>
+ <text x="1353" y="582" font-family="Arial,Helvetica,sans-serif" font-size="16.4" fill="#A0B4D0">Release with care</text>
+ </g>
+<text x="70" y="661" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" letter-spacing="3" fill="#A5B8D3">BUILT FOR PRACTICAL SOFTWARE ENGINEERING</text>
+<g>
+ <rect x="67" y="685" width="333" height="122" rx="17" fill="#17263A" fill-opacity=".85" stroke="#364962"/>
+ <circle cx="99" cy="724" r="10" fill="#50E0D6"/>
+ <path d="M94 724h10 M99 719v10" stroke="#0C1B2B" stroke-width="2"/>
+ <text x="123" y="734" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ECF4FF">Any codebase</text>
+ <text x="90" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Adapt to your actual stack</text>
+ </g><g>
+ <rect x="445" y="685" width="333" height="122" rx="17" fill="#17263A" fill-opacity=".85" stroke="#364962"/>
+ <circle cx="477" cy="724" r="10" fill="#AF9AFF"/>
+ <path d="M472 724h10 M477 719v10" stroke="#0C1B2B" stroke-width="2"/>
+ <text x="501" y="734" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ECF4FF">30 focused skills</text>
+ <text x="468" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Use only what the task needs</text>
+ </g><g>
+ <rect x="823" y="685" width="333" height="122" rx="17" fill="#17263A" fill-opacity=".85" stroke="#364962"/>
+ <circle cx="855" cy="724" r="10" fill="#F5BF77"/>
+ <path d="M850 724h10 M855 719v10" stroke="#0C1B2B" stroke-width="2"/>
+ <text x="879" y="734" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ECF4FF">Test &amp; review</text>
+ <text x="846" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Check quality before shipping</text>
+ </g><g>
+ <rect x="1201" y="685" width="333" height="122" rx="17" fill="#17263A" fill-opacity=".85" stroke="#364962"/>
+ <circle cx="1233" cy="724" r="10" fill="#80DFA7"/>
+ <path d="M1228 724h10 M1233 719v10" stroke="#0C1B2B" stroke-width="2"/>
+ <text x="1257" y="734" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ECF4FF">Human control</text>
+ <text x="1224" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Tools and approvals stay yours</text>
+ </g><path d="M70 833H1530" stroke="#34465E" stroke-width="2"/>
+<text x="70" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#B8C8DD">Created by Vishaal Zala</text>
+<text x="800" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" text-anchor="middle" fill="#829FBD">MIT License  ·  v0.4.0</text>
+<text x="1530" y="868" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#83D9E5">github.com/vishaalzala/DevFlowForge</text>
+</svg>
