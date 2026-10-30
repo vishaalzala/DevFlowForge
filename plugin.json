@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "devflowforge",
-  "version": "0.4.0",
-  "description": "Universal software-engineering skill toolkit for AI coding assistants: discover, plan, debug, implement, test, review, and ship safely.",
+  "version": "0.5.0",
+  "description": "77 portable engineering and design skills for AI coding assistants: product discovery, UI/UX, architecture, implementation, testing, security and safe delivery.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -24,15 +24,15 @@
     "com.openai": {
       "interface": {
         "displayName": "DevFlowForge",
-        "shortDescription": "30 skills for reliable code",
-        "longDescription": "A universal set of 30 reusable engineering skills for AI coding assistants across software projects and technology stacks. Discovers existing architecture, then guides debugging, implementation, testing, security, performance, integrations and releases. Skills are instructions, not autonomous tool access; actions require connected tools and permission.",
+        "shortDescription": "77 engineering & design skills",
+        "longDescription": "A cross-stack toolkit of 77 self-contained skills for product discovery, UI/UX and design systems, mobile and web engineering, data, AI, security, testing and reliable releases. Guides competent AI coding assistants; skills do not themselves run commands, produce Figma designs or grant repository permissions.",
         "developerName": "Vishaal Zala",
         "category": "Productivity",
         "capabilities": [],
         "defaultPrompt": [
-          "Act as CTO for my project. Inspect the actual repository, clarify the acceptance criteria, propose a safe implementation plan, implement only if authorized, and report verified tests and risks.",
-          "Review this project's architecture, code quality, performance and security. Prioritize findings by impact and give concrete evidence.",
-          "Help debug this regression across my stack. Reproduce the issue, identify the root cause, propose the smallest fix, add regression tests and prepare a reviewed pull request."
+          "Use DevFlowForge to research the users and design a new accessible SaaS dashboard with wireframes, design tokens and an implementation plan.",
+          "Audit this repository across architecture, security, product UX, performance and test coverage. Select only relevant skills and cite evidence.",
+          "Implement this feature safely: inspect the repository, define acceptance scenarios, review design, test, submit a PR and report anything unverified."
         ]
       }
     }

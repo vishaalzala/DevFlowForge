@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
 <title id="title">DevFlowForge — developer engineering workflow</title>
-<desc id="desc">An open-source toolkit with 30 engineering skills. A seven-stage process: Discover, Investigate, Plan, Implement, Test, Review and Ship. Designed for any codebase with secure, test-driven delivery.</desc>
+<desc id="desc">An open-source toolkit with 77 engineering and design skills. A seven-stage process: Discover, Investigate, Plan, Implement, Test, Review and Ship. Designed for any codebase with secure, test-driven delivery.</desc>
 <defs>
  <linearGradient id="background" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#08111D"/><stop offset=".54" stop-color="#11172C"/><stop offset="1" stop-color="#0A1527"/></linearGradient>
  <linearGradient id="namegradient" x1="0" x2="1"><stop stop-color="#5DDBE7"/><stop offset=".51" stop-color="#83B7FF"/><stop offset="1" stop-color="#B9A0FF"/></linearGradient>
@@ -16,7 +16,7 @@
 <g opacity=".15" stroke="#8F9BFF" fill="none" stroke-width="2"><path d="M1310 130l35 35-35 35"/><path d="M1375 130l35 35-35 35"/><path d="M1440 130l35 35-35 35"/></g>
 <rect x="68" y="54" width="391" height="43" rx="21.5" fill="#172738" stroke="#345469"/>
 <circle cx="93" cy="75" r="6" fill="#5DDBE7"/>
-<text x="112" y="82" font-size="20" font-family="Arial,Helvetica,sans-serif" font-weight="700" letter-spacing="2" fill="#BAE5E8">OPEN SOURCE  /  30 SKILLS</text>
+<text x="112" y="82" font-size="20" font-family="Arial,Helvetica,sans-serif" font-weight="700" letter-spacing="2" fill="#BAE5E8">OPEN SOURCE  /  77 SKILLS</text>
 <text x="65" y="194" font-family="Arial,Helvetica,sans-serif" font-size="93" letter-spacing="-4" font-weight="800" fill="#F1F6FF">DevFlow</text>
 <text x="466" y="194" font-family="Arial,Helvetica,sans-serif" font-size="93" letter-spacing="-4" font-weight="800" fill="url(#namegradient)">Forge</text>
 <text x="71" y="252" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="500" fill="#C9D8EC">A practical engineering playbook for AI coding assistants.</text>
@@ -102,7 +102,7 @@
  <rect x="445" y="685" width="333" height="122" rx="17" fill="#17263A" fill-opacity=".85" stroke="#364962"/>
  <circle cx="477" cy="724" r="10" fill="#AF9AFF"/>
  <path d="M472 724h10 M477 719v10" stroke="#0C1B2B" stroke-width="2"/>
- <text x="501" y="734" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ECF4FF">30 focused skills</text>
+ <text x="501" y="734" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#ECF4FF">77 focused skills</text>
  <text x="468" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Use only what the task needs</text>
  </g><g>
  <rect x="823" y="685" width="333" height="122" rx="17" fill="#17263A" fill-opacity=".85" stroke="#364962"/>
@@ -118,6 +118,6 @@
  <text x="1224" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Tools and approvals stay yours</text>
  </g><path d="M70 833H1530" stroke="#34465E" stroke-width="2"/>
 <text x="70" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#B8C8DD">Created by Vishaal Zala</text>
-<text x="800" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" text-anchor="middle" fill="#829FBD">MIT License  ·  v0.4.0</text>
+<text x="800" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" text-anchor="middle" fill="#829FBD">MIT License  ·  v0.5.0</text>
 <text x="1530" y="868" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#83D9E5">github.com/vishaalzala/DevFlowForge</text>
 </svg>
