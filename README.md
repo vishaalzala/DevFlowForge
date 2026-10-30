@@ -1,5 +1,13 @@
 # DevFlowForge
 
+<div align="center">
+
+![DevFlowForge visual overview: Discover, Investigate, Plan, Implement, Test, Review, Ship](assets/devflowforge-overview.svg)
+
+*From understanding an unfamiliar codebase to shipping a reviewed change — a repeatable workflow powered by 30 focused engineering skills.*
+
+</div>
+
 **Build thoughtfully. Test confidently. Ship safely.**
 
 **DevFlowForge** is an open-source collection of **30 reusable engineering skills** for AI coding assistants. It helps developers apply repeatable workflows—**Discover → Investigate → Plan → Implement → Test → Review → Ship**—to any software project.
