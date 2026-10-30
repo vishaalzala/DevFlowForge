@@ -1,10 +1,12 @@
-# DevFlowForge
-
 <div align="center">
 
-![DevFlowForge development workflow: Discover, Investigate, Plan, Implement, Test, Review and Ship](assets/devflowforge-overview.svg)
+![DevFlowForge: from idea to implementation, with clear checks](assets/readme/hero.svg)
+
+# DevFlowForge
 
 **Build thoughtfully. Test confidently. Ship safely.**
+
+[What it covers](#what-can-it-help-with) · [See the workflow](#see-the-workflow) · [Installation](#installation) · [Skill catalog](#skill-catalog) · [SEOForge](#work-with-seoforge)
 
 </div>
 
@@ -14,7 +16,19 @@
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
+## See the workflow
+
+![Illustrative DevFlowForge journey from discovery through delivery](assets/readme/workflow-demo.gif)
+
+*This animation illustrates how the skills guide a task; it is not a recording of a live project.*
+
+![DevFlowForge development workflow: Discover, Investigate, Plan, Implement, Test, Review and Ship](assets/devflowforge-overview.svg)
+
+A skill provides a repeatable approach. The assistant reads the real project, uses relevant skills, makes changes when authorised and reports the checks it actually ran.
+
 ## What can it help with?
+
+![Seven areas of DevFlowForge skills: product, design, frontend, backend, security, delivery and AI](assets/readme/capabilities.svg)
 
 | Area | Examples |
 |---|---|
@@ -74,6 +88,14 @@ Use your assistant's documented skills-loader, or supply a specific `skills/<nam
 ## Skill catalog
 
 The root `skills/` directory contains **77 standalone SKILL.md files**. See [SKILL CATALOG](SKILLS.md) for a browsable, grouped table of all skills and direct links. See [Skill routing guide](references/skill-routing.md) for how to combine capabilities without loading everything at once.
+
+## Work with SEOForge
+
+![SEOForge identifies an SEO issue; DevFlowForge guides implementation and verification](assets/readme/companion-workflow.svg)
+
+[**SEOForge**](https://github.com/vishaalzala/SEOForge) is a companion project with **32 SEO skills** for website audits, search data interpretation, content, technical SEO and source-code fixes. DevFlowForge adds broader design, engineering, testing, security and delivery guidance when a finding calls for a website change. They are separate plugins; ChatGPT can coordinate skills from both when installed and available, with the project tools needed for the task.
+
+**Example request:** “Use SEOForge to identify confirmed technical SEO issues in this site. Use DevFlowForge to implement the highest-priority fix in the connected repository, run relevant checks and show me the result.”
 
 ## Quality and contribution
 
