@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.0] - 2026-11-03
+- Added `adaptive-http-compression`, a project-independent HTTP content negotiation skill (80 → 81).
+- Documented Zstd, Brotli, Gzip, RFC 9110 q-values, `identity` fallback, cache/security constraints and mobile compatibility.
+- Added source-linked compatibility/test matrix; routed compression investigations through performance and Web Vitals skills.
+- Updated manifests, validator, skill catalog, guidance and README. No hosted runtime or production site was changed.
+
 ## [0.6.0] - 2026-10-30
 - Introduced explicit Red-Green-Refactor test-driven development guidance for behavior changes.
 - Expanded risk-based unit, integration, contract, E2E, accessibility and performance test gates with evidence reporting.
@@ -19,6 +25,12 @@
 - Retained all 30 project-agnostic engineering skills and public MIT licensing.
 
 # Changelog
+
+## [0.7.0] - 2026-11-03
+- Added `adaptive-http-compression`, a project-independent HTTP content negotiation skill (80 → 81).
+- Documented Zstd, Brotli, Gzip, RFC 9110 q-values, `identity` fallback, cache/security constraints and mobile compatibility.
+- Added source-linked compatibility/test matrix; routed compression investigations through performance and Web Vitals skills.
+- Updated manifests, validator, skill catalog, guidance and README. No hosted runtime or production site was changed.
 
 ## 0.3.0 — 2026-10-30
 - Repositioned the toolkit for any software project, language and development stack.

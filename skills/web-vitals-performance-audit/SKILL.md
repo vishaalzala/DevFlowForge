@@ -9,7 +9,7 @@ description: Use for Lighthouse, browser performance traces, layout shifts, inte
 
 ## Workflow
 1. Define page and user impact; distinguish field data, lab measurement, synthetic tests and static estimates.
-2. Measure LCP, INP and CLS where applicable; inspect network waterfalls, JS execution, images, fonts, cache and long tasks.
+2. Measure LCP, INP and CLS where applicable; inspect network waterfalls, transferred versus decoded bytes, `Content-Encoding`, JS execution, images, fonts, cache and long tasks. Use `adaptive-http-compression` when text-response compression/negotiation is a verified bottleneck, not as a generic fix for poor LCP or CLS.
 3. Find root cause before changing bundling, rendering or caching; avoid unverifiable performance promises.
 4. Apply one focused improvement at a time and compare repeatable before/after runs under identical conditions.
 5. Add budgets or regression checks for critical journeys, noting devices, network and data limitations.

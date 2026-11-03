@@ -1,4 +1,4 @@
-# DevFlowForge Skill Catalog — 80 skills
+# DevFlowForge Skill Catalog — 81 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
 
@@ -40,6 +40,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`web-framework-architecture`](skills/web-framework-architecture/SKILL.md) | Use for React, Next.js, Vue, Nuxt, SvelteKit, Astro, Angular or server-rendered web app architecture |
 | [`browser-e2e-visual-regression`](skills/browser-e2e-visual-regression/SKILL.md) | Use for Playwright/Cypress/browser automation, screenshot comparisons or verifying real user journeys |
 | [`web-vitals-performance-audit`](skills/web-vitals-performance-audit/SKILL.md) | Use for Lighthouse, browser performance traces, layout shifts, interaction latency, slow loading or performance budgets |
+| [`adaptive-http-compression`](skills/adaptive-http-compression/SKILL.md) | Use for adaptive browser-aware HTTP compression, Zstd/Brotli/Gzip negotiation, CDN caches, safe uncompressed fallback and transfer-size auditing |
 | [`native-mobile-app-engineering`](skills/native-mobile-app-engineering/SKILL.md) | Use for Android, iOS, React Native, Expo, Flutter or cross-platform app architecture and UI |
 | [`desktop-cli-experience`](skills/desktop-cli-experience/SKILL.md) | Use when building desktop apps, terminals, CLIs, local tools or command-driven workflows |
 | [`customer-portal-identity`](skills/customer-portal-identity/SKILL.md) | Use when implementing customer portal invitations, automatic account creation, password recovery, access linking or role-based portal journeys |

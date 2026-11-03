@@ -1,8 +1,8 @@
 {
   "interface": {
     "displayName": "DevFlowForge",
-    "shortDescription": "80 engineering & design skills",
-    "longDescription": "A cross-stack toolkit of 80 self-contained skills for product discovery, UI/UX and design systems, mobile and web engineering, data, AI, security, testing and reliable releases. Guides competent AI coding assistants; skills do not themselves run commands, produce Figma designs or grant repository permissions.. Includes TDD, unit/integration/E2E quality gates and approval-based penetration testing handoff.",
+    "shortDescription": "81 engineering & design skills",
+    "longDescription": "A cross-stack toolkit of 81 self-contained skills for product, design, mobile/web engineering, data, AI, security, TDD, testing, adaptive HTTP compression and reliable releases. Compression guidance negotiates Zstd/Brotli/Gzip using Accept-Encoding rather than browser labels. Skills are instructions, not automatic execution or infrastructure.",
     "developerName": "Vishaal Zala",
     "category": "Productivity",
     "capabilities": [],
@@ -13,8 +13,8 @@
     ]
   },
   "name": "devflowforge",
-  "version": "0.6.0",
-  "description": "80 portable product, design and engineering skills for AI coding assistants, including TDD, layered testing and secure release gates.",
+  "version": "0.7.0",
+  "description": "81 portable engineering and design skills for AI coding assistants, including browser-aware HTTP compression, TDD, performance, testing and security.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -29,7 +29,8 @@
     "security",
     "devops",
     "performance",
-    "release-management"
+    "release-management",
+    "compression"
   ],
   "repository": "https://github.com/vishaalzala/devflowforge",
   "license": "MIT",

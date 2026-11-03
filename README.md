@@ -10,9 +10,9 @@
 
 </div>
 
-**DevFlowForge** is an open-source collection of **80 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
+**DevFlowForge** is an open-source collection of **81 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.5.0 · 80 skills · MIT License**
+**Version 0.7.0 · 81 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -68,6 +68,18 @@ For application behavior changes, use **Red → Green → Refactor**: write a me
 **Optional security handoff:** When the project has exposed services or sensitive data, after functional verification ask: **“Would you like to arrange a scoped, authorized penetration test before release?”** Do not begin active scanning without the project owner's explicit authorization and an agreed scope. Performance testing is a separate, existing skill (`load-stress-capacity-testing`) that also requires authorization and safe load limits.
 
 **Example:** “Use DevFlowForge TDD to implement this feature. Show the failing test, apply the smallest fix, run unit, integration and critical end-to-end tests, and give me a release-readiness report. Then ask whether a scoped security assessment makes sense.”
+
+## Adaptive HTTP compression (new in v0.7.0)
+
+DevFlowForge includes [`adaptive-http-compression`](skills/adaptive-http-compression/SKILL.md), a standalone, platform-independent skill for reducing HTTP response transfer sizes without breaking browsers, mobile clients or caches. It is complemented by the detailed [compatibility and test matrix](references/http-compression-compatibility.md).
+
+- Check the **actual** `Accept-Encoding` request header; do not assume Chrome on mobile lacks Zstd or try to identify mobile browsers by user-agent.
+- Select **Zstd, Brotli or Gzip** only when both the client and the server/CDN support the option and measurements justify it.
+- Do not offer **Normal** as a user-facing algorithm. Keep standards-compliant uncompressed (`identity`) fallback internally when needed.
+- Preserve `Vary: Accept-Encoding` where applicable, private-data caching boundaries, streaming behavior and secure secret handling.
+- Inspect the hosting/CDN first; if compression is already negotiated correctly, **don't add a duplicate compressor**.
+
+**Example prompt:** “Use `adaptive-http-compression` to audit this website's HTML, JS, CSS and API responses. Check CDN and actual browser headers, test mobile/desktop compatibility and q-value edge cases, preserve secure caching and fallback, then implement only verified changes with tests and before/after byte/latency measurements. Do not deploy without approval.”
 
 ## Installation
 

@@ -10,7 +10,8 @@ For changes, report each gate as **Pass**, **Fail**, **Not run**, or **Not appli
 6. Security: secrets, least privilege, input validation, auth, data isolation, payment logic, consent, safe logging and errors.
 7. Operations: migration reversibility, feature flags where warranted, delivery and retry idempotency, backups where relevant, monitoring and rollback.
 8. Review: inspect final diff, API and contract changes, regression scenarios, accessibility, localization and timezone handling when affected.
-9. Handoff: links to real branch/PR/commit if created, outstanding failures and next steps. After required functional and security checks, ask whether an explicitly authorized, appropriately scoped penetration test is wanted when risk warrants it. Never initiate active testing from this suggestion.
+9. Compression changes (when applicable): verify `Accept-Encoding` negotiation, explicit exclusions, identity fallback, Vary/cache keys, sensitive content, compressed payload integrity, streaming semantics and comparable performance before/after; if managed CDN already handles correctly, no new middleware.
+10. Handoff: links to real branch/PR/commit if created, outstanding failures and next steps. After required functional and security checks, ask whether an explicitly authorized, appropriately scoped penetration test is wanted when risk warrants it. Never initiate active testing from this suggestion.
 10. Release decision: distinguish coding complete, automated tests passed, optional security assessment requested and deployment approved; no implicit production promotion.
 
 ## Change risk
