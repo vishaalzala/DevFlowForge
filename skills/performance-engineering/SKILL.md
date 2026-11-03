@@ -12,3 +12,5 @@ description: Use for slow web/mobile/backend pages, dashboard delays, expensive 
 5. Avoid stale billing/permission values: list invalidation triggers (login/logout, company switch, permission/entitlement/subscription changes). Check session and data safety.
 6. Run before/after benchmarks under comparable conditions; test critical user flows, error handling and permissions. Report metrics measured and do not quote unobserved improvement percentages.
 7. For platform costs, inspect actual billable build CPU, function duration, bandwidth, caching and deployment frequency before recommending changes.
+
+8. For response-body transfer cost, refer to `adaptive-http-compression` for codec negotiation and safety; for real-browser loading proof use `web-vitals-performance-audit`. Compression cannot fix DB/API latency, render blocking or layout shift by itself.

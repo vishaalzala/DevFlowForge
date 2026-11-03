@@ -8,6 +8,7 @@
 - For behavioral code work use `test-driven-development` (Red → Green → Refactor); `unit-integration-e2e-testing` for layered suites; `browser-e2e-visual-regression` for real browser flows; `contract-compatibility-testing` for producer/consumer compatibility; and `test-strategy-release-gates` before claiming completion. Avoid mandatory TDD claims for documentation-only work.
 - Only *after* relevant automated/functional verification, use `authorized-penetration-test-handoff` to offer a separate, scoped, consent-based penetration test for exposed or sensitive applications. Do not automatically test or silently infer consent.
 - Use `performance-engineering` for general bottlenecks, `web-vitals-performance-audit` for field/lab web metrics, `database-query-index-optimization` for database query plans, or `load-stress-capacity-testing` for authorised load measurements.
+- Use `adaptive-http-compression` for negotiated HTTP body compression (Zstd/Brotli/Gzip), actual client `Accept-Encoding` support and CDN/cache correctness; combine with `performance-engineering` for bottleneck investigation or `web-vitals-performance-audit` for user-visible metrics. Do not use user-agent mobile/desktop assumptions or add second compression middleware without confirming CDN behavior.
 - Activate vendor-specific skills (`supabase-rls-multi-tenant`, `stripe-billing-integrity`) only when the verified project uses those services.
 - Security/privacy/AI/production changes add the relevant safety review skill and approval checks even if another skill owns implementation.
 
