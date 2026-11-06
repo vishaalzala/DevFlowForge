@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0] - 2026-11-06
+- Added three independently written skills: `design-quality-auditor`, `visual-direction-engine` and `design-preservation-verification` (82 → 85).
+- Added original design quality/preservation playbook distinguishing objective defects from discretionary style critiques, with explicit brand and approval boundaries.
+- Added opt-in local/staging Playwright browser inspector: responsive viewport captures, semantic control/content inventories, reviewable craft findings, before/after comparisons and optional PNG screenshot diffing. Separate deterministic concept brief tool provides three distinct starting directions.
+- Added policy/unit tests and a real local-fixture Chromium smoke test to GitHub Actions; updated routing, metadata, catalog, README and structural validation.
+- No third-party themes, images or scripts copied; no hosted browser agent, no production website changes, and no claim of automated aesthetic certification.
+
 ## [0.8.0] - 2026-11-06
 - Added original `website-qa-auditor` skill (81 → 82), cross-route/control coverage guidance and staging-only business scenario test design.
 - Included an optional local Playwright + axe-core CLI that inventories accessible links, buttons, fields, forms, browser errors and viewport-specific issues; produces JSON/Markdown reports.

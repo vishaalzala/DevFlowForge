@@ -1,0 +1,8 @@
+{
+  "product": "Example scheduling service",
+  "audience": "Busy people who need a fast booking experience",
+  "primaryJob": "Choose an available appointment and confirm it",
+  "material": ["real appointment options", "approved logo", "verified service descriptions"],
+  "constraints": ["mobile first", "accessible keyboard flow"],
+  "brand": "Preserve approved typography and colors"
+}

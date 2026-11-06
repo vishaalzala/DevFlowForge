@@ -9,7 +9,7 @@ assert re.fullmatch(r'\d+\.\d+\.\d+',m['version'])
 assert re.fullmatch(r'[a-z0-9](?:[a-z0-9.-]{0,62}[a-z0-9])?',m['name'])
 assert len(m['extensions']['com.openai']['interface']['shortDescription'])<=30
 skills=list((p/'skills').glob('*/SKILL.md'))
-assert len(skills)==82, len(skills)
+assert len(skills)==85, len(skills)
 for f in skills:
     t=f.read_text(encoding='utf-8')
     assert t.startswith('---\n'), f
@@ -35,7 +35,7 @@ assert len({f.parent.name for f in skills})==len(skills), 'Duplicate skill folde
 for f in skills:
     body=f.read_text(encoding='utf-8')
     assert len(body.split())>=77, f'Skill too short: {f}'
-assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==82, 'Skill catalog incomplete'
+assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==85, 'Skill catalog incomplete'
 for f in p.rglob('*.md'):
     txt=f.read_text(encoding='utf-8')
     assert not re.search(r'(?i)everything[- ]claude[- ]code|\bECC-inspired\b|workshophq|open-search\s+project',txt), f'Stale project or branding reference: {f}'
@@ -55,6 +55,18 @@ qa_manifest=json.loads((qa/'package.json').read_text(encoding='utf-8'))
 assert 'playwright' in qa_manifest['dependencies']
 assert '@axe-core/playwright' in qa_manifest['dependencies']
 assert 'website-qa-auditor' in (p/'references/skill-routing.md').read_text(encoding='utf-8')
+
+# Design Intelligence module: instruction files, local-only runner and safeguards.
+for skill in ('design-quality-auditor','visual-direction-engine','design-preservation-verification'):
+    assert (p/f'skills/{skill}/SKILL.md').is_file(), skill
+    assert skill in (p/'SKILLS.md').read_text(encoding='utf-8'), skill
+    assert skill in (p/'references/skill-routing.md').read_text(encoding='utf-8'), skill
+assert (p/'references/design-intelligence-quality.md').is_file()
+design = p/'tools/design-intelligence'
+for file in ['package.json','README.md','config/audit.example.json','config/brief.example.json','src/policy.mjs','src/analyze.mjs','src/audit.mjs','src/directions.mjs','tests/policy.test.mjs','tests/browser-smoke.mjs']:
+    assert (design/file).is_file(), f'Missing Design Intelligence tool: {file}'
+manifest_design = json.loads((design/'package.json').read_text(encoding='utf-8'))
+assert all(dep in manifest_design.get('dependencies',{}) for dep in ('playwright','pixelmatch','pngjs'))
 
 print(f'Validated {len(skills)} skills and plugin v{m["version"]}')
 

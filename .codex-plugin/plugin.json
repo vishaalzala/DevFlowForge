@@ -1,8 +1,8 @@
 {
   "interface": {
     "displayName": "DevFlowForge",
-    "shortDescription": "82 engineering & design skills",
-    "longDescription": "Cross-stack toolkit with 82 independent design and engineering skills, including Playwright website QA audits, route and control inventories, accessibility checks, TDD, performance, safe deployment and browser-aware compression. The optional local QA runner needs separate installation and an approved target environment.",
+    "shortDescription": "85 engineering & design skills",
+    "longDescription": "85 reusable design and engineering skills covering visual direction, design quality auditing and preservation checks, website QA with optional Playwright tooling, TDD, security and performance. Browser runners require separate local/staging setup; skills alone do not grant browser access.",
     "developerName": "Vishaal Zala",
     "category": "Productivity",
     "capabilities": [],
@@ -13,8 +13,8 @@
     ]
   },
   "name": "devflowforge",
-  "version": "0.8.0",
-  "description": "82 reusable design and engineering skills, including safe Playwright-powered website QA auditing, TDD, performance and security.",
+  "version": "0.9.0",
+  "description": "85 reusable engineering and design skills, including visual direction, browser design checks, redesign preservation, website QA and TDD.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -31,7 +31,9 @@
     "performance",
     "release-management",
     "compression",
-    "website-qa"
+    "website-qa",
+    "design-quality",
+    "visual-regression"
   ],
   "repository": "https://github.com/vishaalzala/devflowforge",
   "license": "MIT",
