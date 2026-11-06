@@ -1,8 +1,8 @@
 {
   "interface": {
     "displayName": "DevFlowForge",
-    "shortDescription": "81 engineering & design skills",
-    "longDescription": "A cross-stack toolkit of 81 self-contained skills for product, design, mobile/web engineering, data, AI, security, TDD, testing, adaptive HTTP compression and reliable releases. Compression guidance negotiates Zstd/Brotli/Gzip using Accept-Encoding rather than browser labels. Skills are instructions, not automatic execution or infrastructure.",
+    "shortDescription": "82 engineering & design skills",
+    "longDescription": "Cross-stack toolkit with 82 independent design and engineering skills, including Playwright website QA audits, route and control inventories, accessibility checks, TDD, performance, safe deployment and browser-aware compression. The optional local QA runner needs separate installation and an approved target environment.",
     "developerName": "Vishaal Zala",
     "category": "Productivity",
     "capabilities": [],
@@ -13,8 +13,8 @@
     ]
   },
   "name": "devflowforge",
-  "version": "0.7.0",
-  "description": "81 portable engineering and design skills for AI coding assistants, including browser-aware HTTP compression, TDD, performance, testing and security.",
+  "version": "0.8.0",
+  "description": "82 reusable design and engineering skills, including safe Playwright-powered website QA auditing, TDD, performance and security.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -30,7 +30,8 @@
     "devops",
     "performance",
     "release-management",
-    "compression"
+    "compression",
+    "website-qa"
   ],
   "repository": "https://github.com/vishaalzala/devflowforge",
   "license": "MIT",

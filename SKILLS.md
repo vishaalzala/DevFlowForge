@@ -1,4 +1,4 @@
-# DevFlowForge Skill Catalog — 81 skills
+# DevFlowForge Skill Catalog — 82 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
 
@@ -31,7 +31,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`accessibility-audit-wcag`](skills/accessibility-audit-wcag/SKILL.md) | Use for WCAG audits, inclusive UI, keyboard navigation, screen readers, forms, color contrast or accessible charts |
 | [`frontend-ux-accessibility`](skills/frontend-ux-accessibility/SKILL.md) | Use for website or dashboard redesign, responsive UI, larger typography, navigation, forms, job kits, portals, landing pages, SEO, accessibility, or UX changes |
 
-## Front-end and application platforms (10)
+## Front-end and application platforms (11)
 
 | Skill | Use when |
 |---|---|
@@ -39,6 +39,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`frontend-state-async-data`](skills/frontend-state-async-data/SKILL.md) | Use when debugging React/Vue/Svelte/Angular state, async loading, cache invalidation, forms or optimistic updates |
 | [`web-framework-architecture`](skills/web-framework-architecture/SKILL.md) | Use for React, Next.js, Vue, Nuxt, SvelteKit, Astro, Angular or server-rendered web app architecture |
 | [`browser-e2e-visual-regression`](skills/browser-e2e-visual-regression/SKILL.md) | Use for Playwright/Cypress/browser automation, screenshot comparisons or verifying real user journeys |
+| [`website-qa-auditor`](skills/website-qa-auditor/SKILL.md) | Use for a bounded website-wide audit of authenticated routes, buttons, links, forms, accessibility and explicit staging-only business workflows |
 | [`web-vitals-performance-audit`](skills/web-vitals-performance-audit/SKILL.md) | Use for Lighthouse, browser performance traces, layout shifts, interaction latency, slow loading or performance budgets |
 | [`adaptive-http-compression`](skills/adaptive-http-compression/SKILL.md) | Use for adaptive browser-aware HTTP compression, Zstd/Brotli/Gzip negotiation, CDN caches, safe uncompressed fallback and transfer-size auditing |
 | [`native-mobile-app-engineering`](skills/native-mobile-app-engineering/SKILL.md) | Use for Android, iOS, React Native, Expo, Flutter or cross-platform app architecture and UI |

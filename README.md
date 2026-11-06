@@ -12,7 +12,7 @@
 
 **DevFlowForge** is an open-source collection of **81 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.7.0 · 81 skills · MIT License**
+**Version 0.8.0 · 82 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -36,7 +36,7 @@ A skill provides a repeatable approach. The assistant reads the real project, us
 | **Design & UI/UX** | Brand identity, design systems, wireframes, Figma handoffs, visual critique, mobile UX, dashboards, landing pages, design-to-code |
 | **Frontend & apps** | React/Vue/other web architectures, forms, async state, accessibility, native mobile apps, CLI UX, browser tests |
 | **Backend & data** | APIs, authentication, databases, ETL, realtime events, caches, privacy, distributed services |
-| **Quality & security** | Unit/integration/E2E tests, WCAG-oriented audits, contract testing, dependency reviews, security safeguards |
+| **Quality & security** | Site-wide browser QA auditor, unit/integration/E2E tests, WCAG checks, contract testing, dependency reviews, security safeguards |
 | **Delivery & operations** | Git workflows, CI/CD, feature flags, IaC, containers, costs, performance tracing, recovery and SLOs |
 | **AI & agents** | AI evaluation, retrieval systems, agent-tool safeguards, prompt quality and skill testing |
 
@@ -80,6 +80,25 @@ DevFlowForge includes [`adaptive-http-compression`](skills/adaptive-http-compres
 - Inspect the hosting/CDN first; if compression is already negotiated correctly, **don't add a duplicate compressor**.
 
 **Example prompt:** “Use `adaptive-http-compression` to audit this website's HTML, JS, CSS and API responses. Check CDN and actual browser headers, test mobile/desktop compatibility and q-value edge cases, preserve secure caching and fallback, then implement only verified changes with tests and before/after byte/latency measurements. Do not deploy without approval.”
+
+## Website QA Auditor (new in v0.8.0)
+
+DevFlowForge includes a [site-wide audit skill](skills/website-qa-auditor/SKILL.md), an [audit and safety playbook](references/website-qa-audit-playbook.md) and a [local Playwright tool](tools/website-qa-auditor/README.md). Unlike a skills-only checklist, the optional runner can actually inspect an **authorised** running website once installed. It inventories same-origin pages, buttons, links, form fields, browser/API errors, responsive viewports and axe-core accessibility findings. JSON/Markdown reports contain the pages and actions observed; screenshots are opt-in.
+
+Use the default **read-only crawl** for discovery. Real button/form and business-flow assertions require explicit scenario definitions, seeded test data and a separate approval for the exact **local/staging origin**. The runner never automatically clicks every control; payment/email/SMS/deletion and production operations must not be fired by generic exploration. No AI model or browser-hosting service is bundled; Playwright MCP and Stagehand are optional external integrations.
+
+```bash
+cd tools/website-qa-auditor
+npm install
+npx playwright install chromium
+cp config/audit.example.json config/audit.json
+# Edit config/audit.json for your approved local/staging website and allowed paths.
+npm run audit -- --config config/audit.json
+```
+
+**Example prompt:** “Use `website-qa-auditor` to inventory all authorised routes, buttons, links, forms, roles and mobile layouts in my staging application. Build specific regression scenarios for the critical workflows, run only safe approved checks with Playwright, capture evidence and report failures without changing production.”
+
+**Important:** The skill guides connected assistants; the separate Node tool needs to be installed and run in a machine or agent runtime with browser access. Installing the ChatGPT plugin alone does not start a browser audit or grant website access.
 
 ## Installation
 

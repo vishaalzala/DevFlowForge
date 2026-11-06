@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0] - 2026-11-06
+- Added original `website-qa-auditor` skill (81 → 82), cross-route/control coverage guidance and staging-only business scenario test design.
+- Included an optional local Playwright + axe-core CLI that inventories accessible links, buttons, fields, forms, browser errors and viewport-specific issues; produces JSON/Markdown reports.
+- Added host/path restrictions, route-depth budgets, opt-in screenshots, staging-origin approval and high-risk action gates to prevent unsafe automatic interactions.
+- Added policy unit tests, an optional local-browser smoke fixture and GitHub CI coverage; updated routing, quality gates, manifests, README and catalog. No production website modified.
+- This adds a local runner, **not** a hosted MCP browser or autonomous AI agent; browser support and actual target-site coverage require separate setup and measured testing.
+
 ## [0.7.0] - 2026-11-03
 - Added `adaptive-http-compression`, a project-independent HTTP content negotiation skill (80 → 81).
 - Documented Zstd, Brotli, Gzip, RFC 9110 q-values, `identity` fallback, cache/security constraints and mobile compatibility.

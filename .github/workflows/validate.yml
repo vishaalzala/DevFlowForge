@@ -11,3 +11,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_plugin.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm --prefix tools/website-qa-auditor test
+      - name: Install browser QA dependencies
+        run: npm --prefix tools/website-qa-auditor install --ignore-scripts
+      - name: Install Chromium for local fixture smoke
+        run: cd tools/website-qa-auditor && npx playwright install --with-deps chromium
+      - name: Exercise QA CLI against local fixture
+        run: node tools/website-qa-auditor/tests/browser-smoke.mjs

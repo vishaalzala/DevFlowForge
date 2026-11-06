@@ -14,6 +14,8 @@ description: Use for Playwright/Cypress/browser automation, screenshot compariso
 4. Capture screenshots with stable fonts/data/environment; review expected changes before updating baselines.
 5. Run tests in isolated environments; document pass/fail/skipped and links to actual artifacts rather than inventing them.
 
+For complete multi-route control inventories and a staging-only scenario runner, use `website-qa-auditor` and the optional `../../tools/website-qa-auditor/` Playwright harness; keep isolated test data and authorisation boundaries.
+
 ## Deliverable
 E2E scenario plan, visual baseline policy and reproducible run results.
 
