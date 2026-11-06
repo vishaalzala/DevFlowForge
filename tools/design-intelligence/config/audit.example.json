@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://127.0.0.1:3000",
+  "environment": "local",
+  "paths": ["/", "/about"],
+  "maxPages": 20,
+  "viewports": [
+    {"name": "desktop", "width": 1280, "height": 800},
+    {"name": "mobile", "width": 390, "height": 844}
+  ],
+  "outputDir": "../results/design-audit",
+  "screenshots": false
+}

@@ -1,4 +1,4 @@
-# DevFlowForge Skill Catalog — 82 skills
+# DevFlowForge Skill Catalog — 85 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
 
@@ -13,7 +13,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`content-design-microcopy`](skills/content-design-microcopy/SKILL.md) | Use when improving product labels, buttons, forms, navigation wording, notifications, onboarding, help text, and error messages |
 | [`experimentation-product-analytics`](skills/experimentation-product-analytics/SKILL.md) | Use when adding event analytics, instrumenting product funnels, evaluating experiments, or measuring feature adoption |
 
-## UI, UX and visual design (13)
+## UI, UX and visual design (16)
 
 | Skill | Use when |
 |---|---|
@@ -26,6 +26,9 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`mobile-responsive-design`](skills/mobile-responsive-design/SKILL.md) | Use when adapting interfaces across phones, tablets, desktops and changing orientation or input methods |
 | [`brand-visual-identity`](skills/brand-visual-identity/SKILL.md) | Use when defining visual direction, graphic identity, marketing assets or consistent product branding |
 | [`visual-design-critique`](skills/visual-design-critique/SKILL.md) | Use when evaluating screenshots or implemented UI for polish, clarity, brand consistency and friction |
+| [`design-quality-auditor`](skills/design-quality-auditor/SKILL.md) | Use to identify observed visual defects and nonblocking design craft suggestions across desktop/mobile interfaces |
+| [`visual-direction-engine`](skills/visual-direction-engine/SKILL.md) | Use to plan distinctive, brand-aware visual concepts based on audience, content and purpose |
+| [`design-preservation-verification`](skills/design-preservation-verification/SKILL.md) | Use to compare before/after redesign snapshots and verify controls and content are preserved |
 | [`design-to-code-implementation`](skills/design-to-code-implementation/SKILL.md) | Use when implementing an approved design in HTML, CSS, React, Vue, Angular, native apps or another existing frontend stack |
 | [`interaction-motion-design`](skills/interaction-motion-design/SKILL.md) | Use when adding transitions, microinteractions, scroll effects, onboarding animation or feedback states |
 | [`accessibility-audit-wcag`](skills/accessibility-audit-wcag/SKILL.md) | Use for WCAG audits, inclusive UI, keyboard navigation, screen readers, forms, color contrast or accessible charts |

@@ -10,9 +10,9 @@
 
 </div>
 
-**DevFlowForge** is an open-source collection of **81 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
+**DevFlowForge** is an open-source collection of **85 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.8.0 · 82 skills · MIT License**
+**Version 0.9.0 · 85 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -33,7 +33,7 @@ A skill provides a repeatable approach. The assistant reads the real project, us
 | Area | Examples |
 |---|---|
 | **Product & research** | User interviews, journeys, product specs, UX copy, prioritization, experiments |
-| **Design & UI/UX** | Brand identity, design systems, wireframes, Figma handoffs, visual critique, mobile UX, dashboards, landing pages, design-to-code |
+| **Design & UI/UX** | Distinct visual directions, brand identity, design systems, Figma handoffs, design quality and preservation checks, mobile UX, dashboards, design-to-code |
 | **Frontend & apps** | React/Vue/other web architectures, forms, async state, accessibility, native mobile apps, CLI UX, browser tests |
 | **Backend & data** | APIs, authentication, databases, ETL, realtime events, caches, privacy, distributed services |
 | **Quality & security** | Site-wide browser QA auditor, unit/integration/E2E tests, WCAG checks, contract testing, dependency reviews, security safeguards |
@@ -100,6 +100,16 @@ npm run audit -- --config config/audit.json
 
 **Important:** The skill guides connected assistants; the separate Node tool needs to be installed and run in a machine or agent runtime with browser access. Installing the ChatGPT plugin alone does not start a browser audit or grant website access.
 
+## Design Intelligence & Quality (new in v0.9.0)
+
+DevFlowForge adds **three original skills**: [`visual-direction-engine`](skills/visual-direction-engine/SKILL.md) for distinct design concepts, [`design-quality-auditor`](skills/design-quality-auditor/SKILL.md) for evidence-based UI craft and responsive reviews, and [`design-preservation-verification`](skills/design-preservation-verification/SKILL.md) for keeping important content and controls intact during a redesign.
+
+Unlike a rigid visual theme library, the module separates **objective problems** (overflow, missing buttons, broken accessibility or interactive states) from **subjective style suggestions** (repetitive cards or an overused composition). A brand can legitimately choose any colour, card shape or layout. The [design quality playbook](references/design-intelligence-quality.md) describes the review criteria.
+
+For executable local checks, [`tools/design-intelligence/`](tools/design-intelligence/README.md) includes an **optional passive Playwright inspector** with mobile/desktop viewport audits, structural before/after reports and opt-in screenshots with pixel differences. It also includes a deterministic helper that presents three contrasting concept briefs from real supplied content. The tool is not an autonomous browser agent and does not run when you install the ChatGPT skill alone. It refuses production targets and never clicks or submits forms. For workflow tests use the separate Website QA Auditor.
+
+**Example:** “Use `visual-direction-engine` to propose three brand-aware directions, implement the approved one, then use `design-quality-auditor` and `design-preservation-verification` to compare responsive layouts and verify controls/content before and after. Report any changes for review without deploying.”
+
 ## Installation
 
 ### Codex CLI / native plugin marketplace
@@ -130,7 +140,7 @@ Use your assistant's documented skills-loader, or supply a specific `skills/<nam
 
 ## Skill catalog
 
-The root `skills/` directory contains **80 standalone SKILL.md files**. See [SKILL CATALOG](SKILLS.md) for a browsable, grouped table of all skills and direct links. See [Skill routing guide](references/skill-routing.md) for how to combine capabilities without loading everything at once.
+The root `skills/` directory contains **85 standalone SKILL.md files**. See [SKILL CATALOG](SKILLS.md) for a browsable, grouped table of all skills and direct links. See [Skill routing guide](references/skill-routing.md) for how to combine capabilities without loading everything at once.
 
 ## Work with SEOForge
 
