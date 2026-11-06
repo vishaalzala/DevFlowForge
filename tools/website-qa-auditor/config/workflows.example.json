@@ -1,0 +1,12 @@
+{
+  "scenarios": [
+    {
+      "name": "Home page opens and has an accessible navigation",
+      "steps": [
+        {"action": "navigate", "path": "/"},
+        {"action": "expectVisible", "selector": "body"},
+        {"action": "expectUrl", "path": "/"}
+      ]
+    }
+  ]
+}

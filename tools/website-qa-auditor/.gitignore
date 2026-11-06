@@ -1,0 +1,8 @@
+node_modules/
+.qa-results/
+auth/
+*.storage-state.json
+*.har
+*.trace.zip
+playwright-report/
+test-results/

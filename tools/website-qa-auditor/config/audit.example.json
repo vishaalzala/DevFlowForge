@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "environment": "local",
+  "browser": "chromium",
+  "startPaths": ["/"],
+  "allowedPathPrefixes": ["/"],
+  "blockPaths": ["/auth/logout", "/account/delete"],
+  "maxPages": 30,
+  "maxDepth": 3,
+  "navigationTimeoutMs": 15000,
+  "accessibility": true,
+  "viewports": [
+    {"name": "desktop", "width": 1366, "height": 768},
+    {"name": "mobile", "width": 390, "height": 844}
+  ],
+  "outputDir": "../.qa-results"
+}

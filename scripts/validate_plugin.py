@@ -9,7 +9,7 @@ assert re.fullmatch(r'\d+\.\d+\.\d+',m['version'])
 assert re.fullmatch(r'[a-z0-9](?:[a-z0-9.-]{0,62}[a-z0-9])?',m['name'])
 assert len(m['extensions']['com.openai']['interface']['shortDescription'])<=30
 skills=list((p/'skills').glob('*/SKILL.md'))
-assert len(skills)==81, len(skills)
+assert len(skills)==82, len(skills)
 for f in skills:
     t=f.read_text(encoding='utf-8')
     assert t.startswith('---\n'), f
@@ -35,7 +35,7 @@ assert len({f.parent.name for f in skills})==len(skills), 'Duplicate skill folde
 for f in skills:
     body=f.read_text(encoding='utf-8')
     assert len(body.split())>=77, f'Skill too short: {f}'
-assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==81, 'Skill catalog incomplete'
+assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==82, 'Skill catalog incomplete'
 for f in p.rglob('*.md'):
     txt=f.read_text(encoding='utf-8')
     assert not re.search(r'(?i)everything[- ]claude[- ]code|\bECC-inspired\b|workshophq|open-search\s+project',txt), f'Stale project or branding reference: {f}'
@@ -45,4 +45,16 @@ for required in ('Accept-Encoding','Content-Encoding','Vary: Accept-Encoding','z
     assert required.lower() in compression.lower(), f'Compression skill missing: {required}'
 assert (p/'references/http-compression-compatibility.md').exists(), 'Missing compression compatibility matrix'
 assert 'adaptive-http-compression' in (p/'references/skill-routing.md').read_text(encoding='utf-8')
+# Website QA Auditor adds an optional runnable local tool, not an automatic browser agent.
+qa = p/'tools/website-qa-auditor'
+assert (p/'skills/website-qa-auditor/SKILL.md').exists()
+assert (p/'references/website-qa-audit-playbook.md').exists()
+for relative in ['package.json','src/audit.mjs','src/policy.mjs','src/report.mjs','src/workflows.mjs', 'config/audit.example.json','tests/policy.test.mjs','tests/browser-smoke.mjs','README.md']:
+    assert (qa/relative).is_file(), f'Missing QA tool: {relative}'
+qa_manifest=json.loads((qa/'package.json').read_text(encoding='utf-8'))
+assert 'playwright' in qa_manifest['dependencies']
+assert '@axe-core/playwright' in qa_manifest['dependencies']
+assert 'website-qa-auditor' in (p/'references/skill-routing.md').read_text(encoding='utf-8')
+
 print(f'Validated {len(skills)} skills and plugin v{m["version"]}')
+
