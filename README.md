@@ -12,7 +12,7 @@
 
 **DevFlowForge** is an open-source collection of **85 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.9.0 · 85 skills · MIT License**
+**Version 0.10.0 · 85 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -109,6 +109,18 @@ Unlike a rigid visual theme library, the module separates **objective problems**
 For executable local checks, [`tools/design-intelligence/`](tools/design-intelligence/README.md) includes an **optional passive Playwright inspector** with mobile/desktop viewport audits, structural before/after reports and opt-in screenshots with pixel differences. It also includes a deterministic helper that presents three contrasting concept briefs from real supplied content. The tool is not an autonomous browser agent and does not run when you install the ChatGPT skill alone. It refuses production targets and never clicks or submits forms. For workflow tests use the separate Website QA Auditor.
 
 **Example:** “Use `visual-direction-engine` to propose three brand-aware directions, implement the approved one, then use `design-quality-auditor` and `design-preservation-verification` to compare responsive layouts and verify controls/content before and after. Report any changes for review without deploying.”
+
+## Research improvements (v0.10.0)
+
+The Monday 9 November 2026 review strengthened **five existing skills areas**, without inflating the 85-skill count:
+
+1. **Next.js security & tenant isolation**: version-aware, feature-conditional advisory checks with safe two-tenant fixtures (see [security review](references/nextjs-tenant-security-review.md)).
+2. **Playwright QA reporting 2.0**: the existing Website QA and design inspectors now target Playwright 1.65 / Node.js 22+; a new [offline QA report aggregator](tools/qa-report-aggregator/README.md) combines issues, visual suggestions, visited route counts and observed workflow outcomes. Standalone `playwright` tools are distinct from `@playwright/test` reporters.
+3. **Evidence-based skill evaluations**: the optional [offline skill evaluator](tools/skill-evaluator/README.md) compares user-provided baseline vs skill-assisted scoring evidence, tests activation and highlights safety regressions. It **does not call an LLM or independently grade model quality**.
+4. **MCP interoperability & safety**: negotiated protocol revision, correct OAuth token audience, bounded scope elevation and untrusted tool outputs (see [compatibility matrix](references/mcp-version-compatibility.md)).
+5. **Observability & background jobs**: SLO-based queue/run monitoring, retry evidence and privacy/cost controls (see [runbook](references/background-job-observability.md)).
+
+These are portable engineering skills and optional local utilities, not a hosted agent, automatic scanner or production deployment. Run local checks with `python scripts/validate_plugin.py`, `npm --prefix tools/skill-evaluator test` and `npm --prefix tools/qa-report-aggregator test`. Any browser automation needs its own authorised local/staging environment.
 
 ## Installation
 

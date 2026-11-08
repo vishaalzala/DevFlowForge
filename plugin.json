@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "devflowforge",
-  "version": "0.9.0",
-  "description": "85 reusable engineering and design skills, including visual direction, browser design checks, redesign preservation, website QA and TDD.",
+  "version": "0.10.0",
+  "description": "85 reusable engineering and design skills with enhanced Next.js security, Playwright QA reporting, evaluation, MCP compatibility and observability.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -22,14 +22,17 @@
     "compression",
     "website-qa",
     "design-quality",
-    "visual-regression"
+    "visual-regression",
+    "skill-evaluation",
+    "observability",
+    "mcp-compatibility"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "DevFlowForge",
         "shortDescription": "85 engineering & design skills",
-        "longDescription": "85 reusable design and engineering skills covering visual direction, design quality auditing and preservation checks, website QA with optional Playwright tooling, TDD, security and performance. Browser runners require separate local/staging setup; skills alone do not grant browser access.",
+        "longDescription": "85 portable skills plus optional local tools for Playwright website QA, design verification, evidence-based skill evaluations, cross-tenant security reviews, MCP compatibility and background-job observability. Tools require separate installation and approved environments.",
         "developerName": "Vishaal Zala",
         "category": "Productivity",
         "capabilities": [],

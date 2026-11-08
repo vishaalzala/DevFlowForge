@@ -23,3 +23,10 @@ For changes, report each gate as **Pass**, **Fail**, **Not run**, or **Not appli
 
 ## Status format
 **Observed:** evidence, commands, source/paths. **Root cause:** proven vs hypothesis. **Changed:** files/PR. **Verified:** test evidence. **Risks:** concrete. **Next:** remaining action.
+
+## Weekly improvement validation gates (v0.10.0)
+- Next.js: applicability verified against current lockfile, runtime and cache usage; synthetic cross-tenant and forbidden-access checks separate from speculation.
+- Browser QA: consolidated report retains failure, review, not-run, browser/viewports, screenshots when captured; check optional Playwright version and Node.js 22+ compatibility in CI.
+- Agent skills: held-out positive/negative/ambiguous fixtures, with/without baseline, external evidence links and independent grading; a synthetic example is not validation.
+- MCP: version, transport, audience, issuer, scope and error handling verified on approved synthetic/mocked endpoints; no secret leakage, unauthorized tool use or silent approval bypass.
+- Jobs: controlled retry/crash/duplicate fixtures, SLO and alert ownership, no sensitive payload in traces, observability provider costs disclosed.

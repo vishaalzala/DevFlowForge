@@ -68,5 +68,20 @@ for file in ['package.json','README.md','config/audit.example.json','config/brie
 manifest_design = json.loads((design/'package.json').read_text(encoding='utf-8'))
 assert all(dep in manifest_design.get('dependencies',{}) for dep in ('playwright','pixelmatch','pngjs'))
 
-print(f'Validated {len(skills)} skills and plugin v{m["version"]}')
 
+
+
+# Weekly improvement suite (v0.10.0): zero additional SKILL.md files by design.
+for reference in ('nextjs-tenant-security-review.md','mcp-version-compatibility.md','background-job-observability.md','skill-evaluation-methodology.md'):
+    assert (p/'references'/reference).is_file(), reference
+for tool in ('skill-evaluator','qa-report-aggregator'):
+    for fname in ('package.json','src/core.mjs','src/cli.mjs','README.md'):
+        assert (p/'tools'/tool/fname).is_file(), f'Missing tool: {tool}/{fname}'
+    manifest=json.loads((p/'tools'/tool/'package.json').read_text())
+    assert manifest['engines']['node']=='>=22'
+for pkg in ('website-qa-auditor','design-intelligence'):
+    manifest=json.loads((p/'tools'/pkg/'package.json').read_text())
+    assert manifest['engines']['node']=='>=22'
+    assert manifest['dependencies']['playwright']=='^1.65.0'
+
+print(f'Validated {len(skills)} skills and plugin v{m["version"]}')

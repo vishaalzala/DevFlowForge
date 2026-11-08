@@ -1,0 +1,6 @@
+{
+  "skill":"root-cause-debugging",
+  "fixtures":[
+    {"fixtureId":"synthetic-regression-example","scenario":"positive","expectedActivation":true,"baseline":{"correctness":2,"evidence":2,"safety":5,"efficiency":3,"activation":false,"reference":"synthetic-baseline-ci-output"},"candidate":{"correctness":4,"evidence":4,"safety":5,"efficiency":4,"activation":true,"reference":"synthetic-candidate-ci-output"}}
+  ]
+}

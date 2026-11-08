@@ -22,3 +22,6 @@ Read `../../references/quality-gates.md` and apply the relevant project context 
 - Stalled work can be detected and resumed.
 
 **Output:** Findings with evidence, proposed or actual change, exact testing status (Pass/Fail/Not run), risk and rollback, and links only to resources actually created. No unsupported claims about production access or running agents.
+
+## Verifiable job lifecycle instrumentation
+Add idempotency-key-safe telemetry for enqueue/claim/start/heartbeat/retry/dead-letter/success; measure oldest-unfinished age and attempts separately from queue depth. Distinguish no jobs (normal zero) from no telemetry (instrumentation failed). Instrument external provider latency and delivery acknowledgements without logging message bodies, phone numbers, emails or tokens. Test a crash/retry, duplicate event and provider timeout with **synthetic** jobs. Detect jobs stuck in claimed status and ownership lease expiration; mark expected no-send vs failed-send explicitly. Refer to `../../references/background-job-observability.md`; changes to real alerting, schedules or integrations require authorization.

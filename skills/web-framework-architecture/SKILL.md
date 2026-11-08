@@ -19,3 +19,6 @@ Version-aware architecture recommendations and verification matrix.
 
 ## Quality gate
 Report what was **observed**, what is **proposed**, which checks **passed/failed/were not run**, and any remaining risks. Use tools only when available and authorised. For destructive, financial, production or customer-data changes, require explicit approval. Never claim a test, screenshot, design file, deployment or tool action exists without evidence.
+
+## Version-specific tenant and cache safeguards
+For Next.js App Router, distinguish server request cache, persistent data cache, `use cache`, CDN cache and client caches. Only when the inspected version and enabled features warrant it, trace tenant-specific keys through root parameters, functions and nested cache boundaries; test cold and warm reads between two *synthetic* tenants. For Pages Router, check server-rendered/API response handling without assuming App Router features exist. Confirm platform-specific adapter and patch requirements from official advisories. Never cache protected data under a shared key or relax auth to speed up an endpoint. Read `../../references/nextjs-tenant-security-review.md` for a scoped assessment template.

@@ -26,3 +26,8 @@ description: Use when auditing a whole website or application across routes, lin
 - Run approval-gated workflows only on an explicitly confirmed staging/local origin. Stop if redirected to an unauthorised origin or when the target environment becomes uncertain.
 
 **Output:** Route/control inventory, risk-based test matrix, a per-failure report with actual artifacts, Pass/Fail/Not run/Not applicable results, coverage gaps, and follow-up PR proposal where authorised.
+
+## Consolidated regression reporting (November 2026)
+After existing passive site inventory and approved staging workflows, optionally combine this tool's JSON output with `tools/design-intelligence` JSON using `tools/qa-report-aggregator/`. Keep **discovered**, **visited**, **verified assertions**, **flaky**, **failed**, **not run** and **not applicable** distinct. Attach real evidence paths only if generated; protect PII and browser storage state. A visual screenshot difference is not proof that a control fails; conversely a pass on page load is not proof that a workflow works.
+
+For projects using `@playwright/test` 1.65+, its `failures` reporter and reporter-specific `onlyFailures` option can aid triage, but **they must not erase total-suite and skipped counts**. Our standalone Playwright browser runner uses the `playwright` library (not Playwright Test reporter) and does not magically acquire those reporter capabilities. If updating browser dependencies, use Node.js 22+, review release notes, pin compatible browser revisions and rerun local/CI smoke tests.

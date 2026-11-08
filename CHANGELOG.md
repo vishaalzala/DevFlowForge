@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.0] - 2026-11-09
+- Implemented five evidence-based weekly recommendations as upgrades to existing skills, retaining **85 independently authored skills** (no duplicate skills added).
+- Expanded framework advisory/Next.js tenant isolation checks, Playwright QA reporting, controlled AI skill evaluation, MCP 2026-07-28 compatibility and background-job observability.
+- Added offline `tools/skill-evaluator/` and `tools/qa-report-aggregator/` with deterministic unit tests and CI checks. These do not call external LLMs or assert real project coverage.
+- Declared Playwright 1.65 for the two optional browser tools and Node.js 22+; compatibility must pass actual CI before release.
+- Added four source-linked review references, updated routing, quality gates, docs and fixed duplicated changelog history.
+- No customer website, staging, production or live provider integrations were modified.
+
 ## [0.9.0] - 2026-11-06
 - Added three independently written skills: `design-quality-auditor`, `visual-direction-engine` and `design-preservation-verification` (82 → 85).
 - Added original design quality/preservation playbook distinguishing objective defects from discretionary style critiques, with explicit brand and approval boundaries.
@@ -37,25 +45,3 @@
 - Renamed the public toolkit to **DevFlowForge** with independent branding.
 - Updated the repository marketplace, manifests, documentation, examples and install instructions.
 - Retained all 30 project-agnostic engineering skills and public MIT licensing.
-
-# Changelog
-
-## [0.7.0] - 2026-11-03
-- Added `adaptive-http-compression`, a project-independent HTTP content negotiation skill (80 → 81).
-- Documented Zstd, Brotli, Gzip, RFC 9110 q-values, `identity` fallback, cache/security constraints and mobile compatibility.
-- Added source-linked compatibility/test matrix; routed compression investigations through performance and Web Vitals skills.
-- Updated manifests, validator, skill catalog, guidance and README. No hosted runtime or production site was changed.
-
-## 0.3.0 — 2026-10-30
-- Repositioned the toolkit for any software project, language and development stack.
-- Updated 26 existing skills and discovery guidance to remove product-specific project context.
-- Added four broadly reusable skills: requirements and acceptance, cross-stack onboarding, architecture decisions, and safe refactoring.
-- Added a public repository marketplace catalog and detailed installation, example prompts and contributor documentation.
-- Unified public and personal-plugin copy under the author's brand.
-
-## 0.2.0 — 2026-10-30
-- Expanded the initial 10 engineering workflows to 26.
-- Added release validation, security guidance and publication documentation.
-
-## 0.1.0 — 2026-10-30
-- Initial CTO engineering workflows.

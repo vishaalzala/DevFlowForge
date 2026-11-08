@@ -118,6 +118,6 @@
  <text x="1224" y="779" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#A8BED8">Tools and approvals stay yours</text>
  </g><path d="M70 833H1530" stroke="#34465E" stroke-width="2"/>
 <text x="70" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" fill="#B8C8DD">Created by Vishaal Zala</text>
-<text x="800" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" text-anchor="middle" fill="#829FBD">MIT License  ·  v0.9.0</text>
+<text x="800" y="868" font-family="Arial,Helvetica,sans-serif" font-size="18" text-anchor="middle" fill="#829FBD">MIT License  ·  v0.10.0</text>
 <text x="1530" y="868" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#83D9E5">github.com/vishaalzala/DevFlowForge</text>
 </svg>
