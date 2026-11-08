@@ -25,3 +25,10 @@ For production releases: rollout decision + test evidence + monitoring and rollb
 For AI: dataset + baseline + measured quality and cost + human oversight.
 
 Do not claim skills alone execute code, operate tools or have autonomous memory. They are instruction assets compatible with capable agent hosts.
+
+## Weekly improvement v0.10.0 routing
+- For published framework advisories and tenant/caching conditions, start with `dependency-vulnerability-upgrades`; pair with `web-framework-architecture` and `security-permissions-billing` **only when verified**, and use `references/nextjs-tenant-security-review.md`.
+- For site-wide browser report triage, use `website-qa-auditor` plus `tools/qa-report-aggregator/` to join observed QA and design outputs. Never equate discovered pages with tested workflows; if a host uses Playwright Test, its separate failure-only reporter does not apply automatically to our standalone runner.
+- For measuring skill gains, use `prompt-and-agent-skill-evaluation` and optional offline `tools/skill-evaluator/`; require actual externally graded baseline/candidate evidence, not a synthetic sample score as proof.
+- For MCP connection work, use `agent-tool-design-and-safety` with `references/mcp-version-compatibility.md`; verify negotiated version and transport before authorizing tool operations.
+- For scheduled jobs and observability, combine `background-jobs-idempotency`, `observability-slo-error-budgets` and `references/background-job-observability.md`; protect data and telemetry costs.

@@ -21,3 +21,6 @@ E2E scenario plan, visual baseline policy and reproducible run results.
 
 ## Quality gate
 Report what was **observed**, what is **proposed**, which checks **passed/failed/were not run**, and any remaining risks. Use tools only when available and authorised. For destructive, financial, production or customer-data changes, require explicit approval. Never claim a test, screenshot, design file, deployment or tool action exists without evidence.
+
+## Reporter and compatibility review
+Where a host project actually uses `@playwright/test` version 1.65 or later, evaluate the `failures` reporter and HTML/JSON/JUnit `onlyFailures` filtering for human triage, while separately retaining full-suite totals, skipped tests, retries and flaky outcomes. This does **not** apply directly to the standalone `playwright` library. Preserve artifact retention, trace privacy, storage-state isolation and screenshot consent. When upgrading Playwright 1.65+, use Node.js 22+ and run the actual bundled Chromium fixture on each supported CI platform; do not upgrade the application under test without permission.

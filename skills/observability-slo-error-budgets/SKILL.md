@@ -19,3 +19,8 @@ SLI/SLO spec, telemetry plan, dashboards and alert test evidence.
 
 ## Quality gate
 Report what was **observed**, what is **proposed**, which checks **passed/failed/were not run**, and any remaining risks. Use tools only when available and authorised. For destructive, financial, production or customer-data changes, require explicit approval. Never claim a test, screenshot, design file, deployment or tool action exists without evidence.
+
+## Background work and multi-tenant tracing
+For scheduled work, collect job lifecycle events with stable *non-sensitive* trace/span/correlation IDs: enqueued, claimed, heartbeat, retry, exhausted, dead-lettered and finished. Track queue depth, oldest queued age, time in queue, attempts, time to completion, deduplication rate, error-rate by reason and external-provider latency. Choose user-impact SLIs (e.g. percentage of reminders delivered within the agreed window) with a measured baseline. Alert on symptom and sustained age, not transient normal retries. Budget telemetry cardinality and retention; hash/redact identifiers and keep traces free of payloads, tokens and customer content.
+
+Review exporter SDK/version and vendor-specific data-collection defaults (including IP or header capture) before enabling monitoring. Sentry and OpenTelemetry are options, not bundled services or free by default. Validate one controlled retry and one intentional failure on staging, verify correlated trace and alert delivery, and document owner, mute conditions and rollback. See `../../references/background-job-observability.md`.

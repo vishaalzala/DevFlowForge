@@ -16,3 +16,6 @@ For legitimate authorized code review and defensive testing; do not perform unap
 7. Produce prioritized findings with evidence, exact exposure, test cases, minimal change proposal, verification status and rollout/rollback risks.
 
 Never share actual credentials or customer secrets in outputs. Do not claim a security audit passes without inspecting relevant code and test evidence.
+
+## Cross-tenant cache and cookie isolation review
+Assess tenant separation not just in database/RLS checks but across SSR responses, CDN keys, shared application caches and background job payloads. With two disposable tenants, assert that cold-cache and warm-cache requests, wrong-role access, and mixed concurrent requests never return another tenant's content; inspect `Set-Cookie`, internal forwarding headers and cache-control. Only use authorized staging fixtures, redact IDs and cookies, and preserve billing gates. See `../../references/nextjs-tenant-security-review.md` for version-conditional Next.js considerations; do not claim an advisory affects every Next.js deployment.

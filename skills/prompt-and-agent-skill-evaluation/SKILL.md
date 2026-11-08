@@ -19,3 +19,8 @@ Portable skill, activation test cases and evaluation notes.
 
 ## Quality gate
 Report what was **observed**, what is **proposed**, which checks **passed/failed/were not run**, and any remaining risks. Use tools only when available and authorised. For destructive, financial, production or customer-data changes, require explicit approval. Never claim a test, screenshot, design file, deployment or tool action exists without evidence.
+
+## Executable, baseline-controlled skill evaluations
+Use `../../tools/skill-evaluator/` to validate *externally obtained*, anonymized outcome records for the same fixture attempted with and without a selected skill. The CLI never calls a model; the user must run the same task under controlled model/tool/temperature context, preserve raw outputs and independently grade factual correctness, safety, verification evidence and efficiency. Include positive, negative and ambiguous invocation test prompts. A score without externally verifiable evidence is **not** an observed improvement, and a high score in a synthetic fixture is not proof of production capability.
+
+Randomize run order, avoid evaluating on examples used to write the skill, allow multiple seeds/tasks, inspect regressions by task, and keep publication conditional on a credible quality increase with no new unsafe behavior. Stop if scoring is unverifiable or missing. Compare distributions across runs, not one winner. See `../../references/skill-evaluation-methodology.md`.
