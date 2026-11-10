@@ -10,9 +10,9 @@
 
 </div>
 
-**DevFlowForge** is an open-source collection of **85 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
+**DevFlowForge** is an open-source collection of **86 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.10.0 · 85 skills · MIT License**
+**Version 0.11.0 · 86 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -121,6 +121,12 @@ The Monday 9 November 2026 review strengthened **five existing skills areas**, w
 5. **Observability & background jobs**: SLO-based queue/run monitoring, retry evidence and privacy/cost controls (see [runbook](references/background-job-observability.md)).
 
 These are portable engineering skills and optional local utilities, not a hosted agent, automatic scanner or production deployment. Run local checks with `python scripts/validate_plugin.py`, `npm --prefix tools/skill-evaluator test` and `npm --prefix tools/qa-report-aggregator test`. Any browser automation needs its own authorised local/staging environment.
+
+## Architecture Connection & Impact Analysis (new in v0.11.0)
+
+For every existing-project code task, DevFlowForge's CTO skill now explicitly classifies **Connected** versus **Isolated** work. Connected work requires an evidence-backed dependency map from the source and shared components through services, persistence, access policies and downstream consumers before fixes. The [skill](skills/architecture-connection-impact-analysis/SKILL.md) and [playbook](references/architecture-connection-impact-playbook.md) document impacted pages, responsibilities, regression tests and uninspected risks.
+
+An [optional JSON impact checker](tools/architecture-impact-checker/README.md) rejects incomplete release attestations but does **not** crawl or analyze a repository by itself. Only authorized source access and actual tests can establish real-world correctness. No automatic modification of other connected modules or production data is permitted.
 
 ## Installation
 

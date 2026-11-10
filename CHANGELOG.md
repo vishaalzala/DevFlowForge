@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0] - 2026-11-11
+- Added `architecture-connection-impact-analysis` (85 → 86 skills), a required Connected/Isolated triage for existing-project engineering tasks and evidence-based upstream/downstream dependency mapping.
+- Updated CTO orchestration, onboarding, architecture audit, debugging, implementation review and test-release gates to check shared callers, data contracts, tenant/role permissions, consumers, conversions and side effects before proposed fixes.
+- Added original architecture-impact playbook and optional dependency-map evidence checker with synthetic unit tests and CI integration. The checker validates *report completeness*, not actual graph correctness or tests; it never touches customer systems.
+- Preserved change authorization, small scoped fixes and honest Not run/Not inspected status. No external application or production data changed.
+
+
 ## [0.10.0] - 2026-11-09
 - Implemented five evidence-based weekly recommendations as upgrades to existing skills, retaining **85 independently authored skills** (no duplicate skills added).
 - Expanded framework advisory/Next.js tenant isolation checks, Playwright QA reporting, controlled AI skill evaluation, MCP 2026-07-28 compatibility and background-job observability.

@@ -1,0 +1,33 @@
+{
+  "synthetic": true,
+  "task": "Example: a shared vehicle selector missing across two screens",
+  "repository": "sample-org/example-app (synthetic fixture only)",
+  "stage": "release",
+  "classification": {"kind":"connected", "reason":"A shared selection component feeds more than one document screen"},
+  "approvedPaths": ["src/components/", "src/services/"],
+  "changePaths": ["src/services/vehicle-query.ts"],
+  "nodes": [
+    {"id":"vehicle-service","kind":"service","evidence":"synthetic src/services/vehicle-query.ts:20"},
+    {"id":"job-page","kind":"route","evidence":"synthetic src/pages/jobs/new.tsx:12"},
+    {"id":"invoice-page","kind":"route","evidence":"synthetic src/pages/invoices/new.tsx:16"}
+  ],
+  "edges": [
+    {"from":"job-page","to":"vehicle-service","relation":"calls","evidence":"synthetic src/pages/jobs/new.tsx:28"},
+    {"from":"invoice-page","to":"vehicle-service","relation":"calls","evidence":"synthetic src/pages/invoices/new.tsx:34"}
+  ],
+  "surfaces": [
+    {"nodeId":"job-page","reason":"Selector renders queried vehicles"},
+    {"nodeId":"invoice-page","reason":"Selector uses the same query service"}
+  ],
+  "riskChecks": {
+    "authorization": {"status":"passed", "evidence":"synthetic test auth-selectors.test.ts"},
+    "tenantIsolation": {"status":"passed", "evidence":"synthetic test tenant-filter.test.ts"},
+    "dataIntegrity": {"status":"passed", "evidence":"synthetic test saved-vehicle-id.test.ts"},
+    "downstreamEffects": {"status":"not-applicable", "reason":"Synthetic fixture has no side effect integration"}
+  },
+  "tests": [
+    {"name":"job selector loads", "surfaceIds":["job-page"],"status":"passed", "evidence":"synthetic CI job-selector.test.ts"},
+    {"name":"invoice selector loads", "surfaceIds":["invoice-page"],"status":"passed", "evidence":"synthetic CI invoice-selector.test.ts"}
+  ],
+  "unknownConnections": []
+}

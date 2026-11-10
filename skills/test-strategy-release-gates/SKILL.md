@@ -14,9 +14,10 @@ Treat 'all tests passed' as an evidenced claim, not a promise. Match the gates t
 4. Prefer test-driven development for new/changed behavior; retain and expand existing regression tests, and do not replace credible integration checks with deep mocking.
 
 ## Release readiness decision
-5. Collect actual commands, CI links, passed/failed/skipped counts and coverage where measured. Recheck build, types, lint, changed route, security permissions, migrations, data integrity, error handling and rollback.
-6. For each gate use **Pass / Fail / Not run / Not applicable** with evidence and risk rationale. Failed required gates block 'ready'; a skipped or unavailable test never becomes a pass.
-7. Confirm the environment, owner, rollback and smoke-check plan. Distinguish 'implementation complete', 'tests verified', 'staging approved' and 'production deployed'. Production deployment requires explicit authorization where applicable.
-8. After functional and automated verification, offer an *optional* authorized penetration-test readiness review when the app has exposed surfaces or sensitive data. Do not run scans without explicit consent. For low-risk or documentation work, note security testing is not needed.
+5. If the change is Connected, require the `architecture-connection-impact-analysis` map and matched positive/negative regression results for each known affected consumer, shared contract and relevant permission/tenant boundary. Record any not-inspected surface as a residual risk; do not convert unknown status into passed.
+6. Collect actual commands, CI links, passed/failed/skipped counts and coverage where measured. Recheck build, types, lint, changed route, security permissions, migrations, data integrity, error handling and rollback.
+7. For each gate use **Pass / Fail / Not run / Not applicable** with evidence and risk rationale. Failed required gates block 'ready'; a skipped or unavailable test never becomes a pass.
+8. Confirm the environment, owner, rollback and smoke-check plan. Distinguish 'implementation complete', 'tests verified', 'staging approved' and 'production deployed'. Production deployment requires explicit authorization where applicable.
+9. After functional and automated verification, offer an *optional* authorized penetration-test readiness review when the app has exposed surfaces or sensitive data. Do not run scans without explicit consent. For low-risk or documentation work, note security testing is not needed.
 
 **Output:** A risk-based test matrix, evidenced results, unresolved gaps, go/no-go recommendation, and clearly separated optional security-testing handoff.

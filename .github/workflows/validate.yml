@@ -33,3 +33,8 @@ jobs:
         run: npm --prefix tools/qa-report-aggregator test
       - name: Validate sample skill-evaluation CLI report
         run: node tools/skill-evaluator/src/cli.mjs --input tools/skill-evaluator/examples/fixtures.json --out /tmp/devflowforge-skill-evaluation
+
+      - name: Architecture impact manifest unit tests
+        run: npm --prefix tools/architecture-impact-checker test
+      - name: Architecture impact fixture validation
+        run: node tools/architecture-impact-checker/src/cli.mjs --input tools/architecture-impact-checker/examples/connected-release.json
