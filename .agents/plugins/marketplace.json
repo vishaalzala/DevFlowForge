@@ -6,6 +6,7 @@
   "plugins": [
     {
       "name": "devflowforge",
+      "pluginId": "Plugin_059879f1572c81918737a510c984bb05",
       "source": {
         "source": "url",
         "url": "https://github.com/vishaalzala/devflowforge.git",
