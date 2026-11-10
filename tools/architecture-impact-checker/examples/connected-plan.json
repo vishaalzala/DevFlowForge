@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "task": "Example: investigate a record selector across pages",
+  "repository": "sample-org/example-app (synthetic fixture only)",
+  "stage": "plan",
+  "classification": {"kind":"connected", "reason":"Two screens share the same record and query component"},
+  "approvedPaths": [],
+  "changePaths": [],
+  "nodes": [
+    {"id":"shared-query","kind":"service","evidence":"synthetic src/services/records.ts:9"},
+    {"id":"editor-screen","kind":"route","evidence":"synthetic src/pages/editor.tsx:4"}
+  ],
+  "edges": [{"from":"editor-screen","to":"shared-query","relation":"calls","evidence":"synthetic src/pages/editor.tsx:21"}],
+  "surfaces": [{"nodeId":"editor-screen","reason":"Uses the missing selected record"}],
+  "riskChecks": {
+    "authorization": {"status":"not-run"},
+    "tenantIsolation": {"status":"not-run"},
+    "dataIntegrity": {"status":"not-run"},
+    "downstreamEffects": {"status":"not-run"}
+  },
+  "tests": [{"name":"selected record visible after refresh", "surfaceIds":["editor-screen"], "status":"not-run"}],
+  "unknownConnections": ["Whether a background listener writes to the same record"]
+}

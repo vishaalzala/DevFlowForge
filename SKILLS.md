@@ -1,4 +1,4 @@
-# DevFlowForge Skill Catalog — 85 skills
+# DevFlowForge Skill Catalog — 86 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
 
@@ -51,12 +51,13 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`offline-first-sync`](skills/offline-first-sync/SKILL.md) | Use when planning a PWA or desktop app that allows offline work, local caching, conflict resolution and eventual synchronization |
 | [`pdf-documents-export`](skills/pdf-documents-export/SKILL.md) | Use when generating printable quotes, invoices, statements, service records, repair reports or branded PDFs and exports |
 
-## Architecture, coding and test (16)
+## Architecture, coding and test (17)
 
 | Skill | Use when |
 |---|---|
 | [`cto-orchestration`](skills/cto-orchestration/SKILL.md) | Use when the user asks you to act as CTO, investigate and fix an issue, make a technical plan, manage a multi-step engineering task, or coordinate changes for any software project |
 | [`cross-stack-codebase-onboarding`](skills/cross-stack-codebase-onboarding/SKILL.md) | Use when starting work in any unfamiliar repository or language stack, or when identifying the architecture and safe commands before coding |
+| [`architecture-connection-impact-analysis`](skills/architecture-connection-impact-analysis/SKILL.md) | Use for required connection/impact mapping before multi-route or shared-data fixes, including consumer regression coverage and permission boundaries |
 | [`repository-architecture-audit`](skills/repository-architecture-audit/SKILL.md) | Use when auditing an existing repository, mapping architecture, locating module ownership, detecting duplicated logic or planning a significant refactor |
 | [`architecture-decisions-tradeoffs`](skills/architecture-decisions-tradeoffs/SKILL.md) | Use when evaluating technology choices, architecture alternatives, scalability, migration paths, or documenting an architecture decision record |
 | [`root-cause-debugging`](skills/root-cause-debugging/SKILL.md) | Use for recurring bugs, UI errors, failed saves, 404s, duplicate inserts, email failures, unexpected permissions, or any request to trace and permanently fix a code defect |

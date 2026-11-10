@@ -1,0 +1,12 @@
+{
+  "name": "devflowforge-architecture-impact-checker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Offline evidence-map completeness checker for cross-feature architecture changes",
+  "engines": {"node": ">=22"},
+  "scripts": {
+    "check": "node src/cli.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

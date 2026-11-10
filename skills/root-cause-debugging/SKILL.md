@@ -6,7 +6,7 @@ description: Use for recurring bugs, UI errors, failed saves, 404s, duplicate in
 # Reproducible root-cause debugging
 
 1. Describe symptom, expected behavior, impacted actors, frequency, environment and first known regression. Look for relevant screenshots, logs, stack traces, failing requests, Git commits and recent deployments.
-2. Reproduce safely with smallest possible fixture; capture the exact call path and root causal condition. Distinguish proven causes from plausible guesses.
+2. Classify Connected vs Isolated with evidence. If selectors, shared records or workflows have multiple consumers, use `architecture-connection-impact-analysis` to trace upstream and downstream connections, database relations and access boundaries **before writing fixes**. Reproduce safely with smallest possible fixture; capture the exact call path and root causal condition. Distinguish proven causes from plausible guesses.
 3. For double inserts/requests, inspect event handler invocation, effect dependencies, React Strict Mode, autosave, retry and optimistic updates, API-side idempotency and uniqueness. Do not 'solve' by hiding duplicated UI entries only.
 4. For form state anomalies, map initial/default values, API shape, controlled inputs, parent/child changes, async fetches, race conditions, navigation/query params and save flows.
 5. Write a regression test that fails on the original behavior where feasible; implement a minimal fix; run targeted tests then broader dependent tests; inspect logs for remaining errors.

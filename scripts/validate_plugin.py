@@ -9,7 +9,7 @@ assert re.fullmatch(r'\d+\.\d+\.\d+',m['version'])
 assert re.fullmatch(r'[a-z0-9](?:[a-z0-9.-]{0,62}[a-z0-9])?',m['name'])
 assert len(m['extensions']['com.openai']['interface']['shortDescription'])<=30
 skills=list((p/'skills').glob('*/SKILL.md'))
-assert len(skills)==85, len(skills)
+assert len(skills)==86, len(skills)
 for f in skills:
     t=f.read_text(encoding='utf-8')
     assert t.startswith('---\n'), f
@@ -35,7 +35,7 @@ assert len({f.parent.name for f in skills})==len(skills), 'Duplicate skill folde
 for f in skills:
     body=f.read_text(encoding='utf-8')
     assert len(body.split())>=77, f'Skill too short: {f}'
-assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==85, 'Skill catalog incomplete'
+assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==86, 'Skill catalog incomplete'
 for f in p.rglob('*.md'):
     txt=f.read_text(encoding='utf-8')
     assert not re.search(r'(?i)everything[- ]claude[- ]code|\bECC-inspired\b|workshophq|open-search\s+project',txt), f'Stale project or branding reference: {f}'
@@ -83,5 +83,13 @@ for pkg in ('website-qa-auditor','design-intelligence'):
     manifest=json.loads((p/'tools'/pkg/'package.json').read_text())
     assert manifest['engines']['node']=='>=22'
     assert manifest['dependencies']['playwright']=='^1.65.0'
+
+# Mandatory architecture connection / impact mapping (v0.11.0).
+impact_skill = p/'skills/architecture-connection-impact-analysis/SKILL.md'
+assert impact_skill.exists()
+for rel in ('references/architecture-connection-impact-playbook.md', 'tools/architecture-impact-checker/package.json', 'tools/architecture-impact-checker/src/core.mjs', 'tools/architecture-impact-checker/src/cli.mjs', 'tools/architecture-impact-checker/tests/check.test.mjs', 'tools/architecture-impact-checker/examples/connected-release.json'):
+    assert (p/rel).is_file(), rel
+for rel in ('skills/cto-orchestration/SKILL.md', 'skills/root-cause-debugging/SKILL.md', 'skills/repository-architecture-audit/SKILL.md', 'skills/test-strategy-release-gates/SKILL.md', 'skills/website-qa-auditor/SKILL.md', 'references/skill-routing.md', 'references/quality-gates.md'):
+    assert 'architecture-connection-impact-analysis' in (p/rel).read_text(encoding='utf-8'), rel
 
 print(f'Validated {len(skills)} skills and plugin v{m["version"]}')

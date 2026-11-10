@@ -10,6 +10,7 @@ Read `../../references/quality-gates.md`.
 - Inspect existing branch status, recent changes, code patterns, tests and CI before editing. Make a scoped acceptance checklist and identify backwards-compatibility constraints.
 - Prefer feature branches and minimal, reversible commits. Avoid unrelated refactors or deleting working code. Never commit `.env`, keys, access tokens or private logs.
 - For behavioral changes, follow `test-driven-development` where practical: targeted failing test → minimal change → passing test → refactor and rerun. Use unit, integration, contract and E2E coverage proportional to risk, and apply `test-strategy-release-gates`. Measure coverage when available; never invent a number.
+- For Connected changes, require an Architecture Impact Map (`architecture-connection-impact-analysis`) and documented verification of each known consumer/boundary, not only the originally reported page; compare changed paths to the user-approved scope.
 - Review the final diff for correctness, missed callers, TypeScript/build errors, auth/RLS/tenant isolation, PII leakage, invoices/tax, accessibility, error states, concurrency and edge cases.
 - Treat tests/CI as evidence; a green build alone is not sufficient proof of business correctness. Note flaky or absent checks.
 - On PR review, explain blocker issues with severity, file/line, impact, reproducibility and proposed change. Don't merge a PR with unresolved blockers or without necessary explicit user approval.

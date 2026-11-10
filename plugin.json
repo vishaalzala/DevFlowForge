@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "devflowforge",
-  "version": "0.10.0",
-  "description": "85 reusable engineering and design skills with enhanced Next.js security, Playwright QA reporting, evaluation, MCP compatibility and observability.",
+  "version": "0.11.0",
+  "description": "86 engineering and design skills, now with mandatory architecture connection and impact analysis for connected project changes.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -25,14 +25,15 @@
     "visual-regression",
     "skill-evaluation",
     "observability",
-    "mcp-compatibility"
+    "mcp-compatibility",
+    "architecture-impact"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "DevFlowForge",
-        "shortDescription": "85 engineering & design skills",
-        "longDescription": "85 portable skills plus optional local tools for Playwright website QA, design verification, evidence-based skill evaluations, cross-tenant security reviews, MCP compatibility and background-job observability. Tools require separate installation and approved environments.",
+        "shortDescription": "86 engineering & design skills",
+        "longDescription": "86 reusable engineering and design skills with mandatory connection/impact triage for interconnected fixes, evidence-based dependency maps, scoped regressions, Playwright website QA, design checks, security and performance. Optional local tooling is separate; skills cannot automatically inspect a project without authorized access.",
         "developerName": "Vishaal Zala",
         "category": "Productivity",
         "capabilities": [],

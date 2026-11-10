@@ -8,7 +8,7 @@ description: Use when designing or implementing unit, integration, contract or e
 **Goal:** Prevent real regressions with layered behavioral coverage. For code changes, pair with `test-driven-development`; for release readiness, use `test-strategy-release-gates`.
 
 ## Strategy
-1. Inspect the repository's languages, test frameworks, CI and current coverage before creating a new runner. Map each acceptance scenario to the smallest test level that can prove it.
+1. For Connected changes, use `architecture-connection-impact-analysis` to map upstream/downstream contracts and consumers first; make sure the integration/E2E matrix includes every known affected route/role without inventing coverage. Inspect the repository's languages, test frameworks, CI and current coverage before creating a new runner. Map each acceptance scenario to the smallest test level that can prove it.
 2. **Unit tests**: isolate pure business rules, transformations, edge conditions and validation. Assert useful behavior rather than internal implementation details. For bug fixes, start with a meaningful failing regression test when feasible.
 3. **Integration tests**: verify API routes, persistence, transactions, external service adapters, queues, auth and cross-component effects with disposable resources. Verify rollback/cleanup and failure modes; mock third-party boundaries when unavoidable, but validate the actual contract separately.
 4. **Contract tests**: protect request and response shapes, versions, schema, error semantics, idempotency and compatibility between consumers and providers.

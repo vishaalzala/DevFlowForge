@@ -11,7 +11,7 @@ Read `../../references/quality-gates.md` and apply the relevant project context 
 
 ## Procedure
 1. Confirm the exact repository, branch, deployed environment, framework versions, tests and package manager from source rather than remembered details.
-2. Trace key user journeys end-to-end: route/component → API → services → database → queues/providers; map dependencies and where security checks occur.
+2. For impacted multi-route, shared-data or lifecycle features, apply `architecture-connection-impact-analysis` and its impact playbook; trace verified upstream producers and downstream consumers and distinguish not-inspected connections. Trace key user journeys end-to-end: route/component → API → services → database → queues/providers; map dependencies and where security checks occur.
 3. Identify data ownership, cross-module coupling, duplicated business rules, accidental synchronous work, dead paths and dependency cycles. Distinguish confirmed defects from architectural preferences.
 4. Rank findings by customer impact, change risk and expected payoff; provide an incremental migration plan with compatibility layers where needed.
 5. Prefer boundary tests and small refactors over broad rewrites; preserve stable APIs, current tables and user-visible contracts.
