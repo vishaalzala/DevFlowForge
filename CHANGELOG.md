@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.0] - 2026-11-20
+- Reviewed the SecurityForge v0.12.0 update overlay against current DevFlowForge v0.11.1, preserving the 87 existing skills and all related lifecycle-debugging changes.
+- Added only the 21 missing SecurityForge skill directories (87 -> 108 skills); **no existing SKILL.md was replaced**.
+- Added OWASP Top 10:2025, ASVS 5.0, agentic trust, NZ privacy and NIST SSDF coverage references, scoped skill routing and an offline supplied-JSON triage helper with tests.
+- Updated plugin manifests, catalog, static validation and CI packaging for 108 skills. Real security scanners, web-app exploit testing, customer data and production changes were not used.
+- Skill instructions and fixture-based tests do not guarantee vulnerability discovery or live protection.
+
+
 ## [0.11.1] - 2026-11-20
 - Added `workflow-data-lifecycle-debugging` (86 to 87 skills) for persisted field, financial-state, conversion, PDF/print/email parity and duplicate-write investigations.
 - Expanded root-cause debugging, architecture impact, financial/PDF specialists, CTO orchestration and release gates with explicit read-only "check" versus scoped "fix and test" intent.

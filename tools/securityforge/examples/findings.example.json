@@ -1,0 +1,21 @@
+{
+  "repository": "example/service",
+  "scan_commit": "test-revision",
+  "findings": [
+    {
+      "id": "F-1",
+      "provider": "aikido",
+      "severity": "Critical",
+      "title": "Review authorization boundary",
+      "path": "src/api/example.ts",
+      "status": "New"
+    },
+    {
+      "id": "F-2",
+      "provider": "dependency-audit",
+      "severity": "high",
+      "title": "Dependency advisory requires version and reachability check",
+      "verification": "pending_verification"
+    }
+  ]
+}

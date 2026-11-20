@@ -10,9 +10,9 @@
 
 </div>
 
-**DevFlowForge** is an open-source collection of **87 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
+**DevFlowForge** is an open-source collection of **108 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.11.1 · 87 skills · MIT License**
+**Version 0.12.0 · 108 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -60,6 +60,14 @@ A skill provides a repeatable approach. The assistant reads the real project, us
 ## Lifecycle-aware investigation
 
 For missing saved fields, mismatched invoice totals/status, lost conversion data, duplicate writes or print/email/PDF inconsistencies, use `workflow-data-lifecycle-debugging`. It traces the first divergence across UI state, save/autosave, API, persistence, refresh and downstream outputs. "Check" means report only; "fix and test" permits scoped branch-level changes, never automatic production deployment. The optional offline report checker validates evidence-report structure, not application behavior.
+
+## SecurityForge cybersecurity skills
+
+Version 0.12.0 adds 21 specialized defensive cybersecurity skills on top of the 87-skill lifecycle/architecture baseline. Existing skills are preserved. See [SecurityForge coverage](references/securityforge-coverage-matrix.md), [findings and release gates](references/securityforge-findings-and-release-gates.md) and [activation evaluation cases](references/securityforge-evaluation-cases.md).
+
+SecurityForge covers OAuth/JWT, cryptography, fail-safe error handling, logging, secrets, secure code, source and CI supply chain, cloud boundaries, web inputs, APIs/webhooks, multi-agent/MCP trust, ASVS mappings and New Zealand privacy. The optional [offline triage helper](tools/securityforge/README.md) processes **supplied JSON**; it does not connect to Aikido or scan live systems.
+
+For a project security review, activate `security-audit-orchestrator` and only the relevant specialist skills. All scanning, repository changes, database permissions, credentials and deployments require appropriate scope and verification. A successful static check is not a security certification.
 
 ## Testing-first development workflow
 
