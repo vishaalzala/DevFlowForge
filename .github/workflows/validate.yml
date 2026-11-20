@@ -39,11 +39,16 @@ jobs:
       - name: Architecture impact fixture validation
         run: node tools/architecture-impact-checker/src/cli.mjs --input tools/architecture-impact-checker/examples/connected-release.json
       - name: Package complete DevFlowForge install ZIP
-        run: python scripts/package_plugin.py --output dist/DevFlowForge-v0.11.1-New-Plugin.zip --expected-skills 87
+        run: python scripts/package_plugin.py --output dist/DevFlowForge-v0.12.0-New-Plugin.zip --expected-skills 108
       - name: Upload complete plugin ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: DevFlowForge-v0.11.1-New-Plugin
-          path: dist/DevFlowForge-v0.11.1-New-Plugin.zip
+          name: DevFlowForge-v0.12.0-New-Plugin
+          path: dist/DevFlowForge-v0.12.0-New-Plugin.zip
           if-no-files-found: error
           retention-days: 30
+      - name: SecurityForge supplied-findings triage tests
+        run: python -m unittest discover -s tools/securityforge/tests -v
+      - name: SecurityForge offline example verification
+        run: python tools/securityforge/triage.py --input tools/securityforge/examples/findings.example.json --output /tmp/securityforge-audit.json
+

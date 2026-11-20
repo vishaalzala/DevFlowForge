@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--expected-skills', type=int, default=87)
+    parser.add_argument('--expected-skills', type=int, default=108)
     args = parser.parse_args()
     root = args.root.resolve()
     raw = subprocess.run(['git', '-C', str(root), 'ls-files', '-z'], check=True, capture_output=True).stdout

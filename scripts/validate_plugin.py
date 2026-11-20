@@ -9,7 +9,7 @@ assert re.fullmatch(r'\d+\.\d+\.\d+',m['version'])
 assert re.fullmatch(r'[a-z0-9](?:[a-z0-9.-]{0,62}[a-z0-9])?',m['name'])
 assert len(m['extensions']['com.openai']['interface']['shortDescription'])<=30
 skills=list((p/'skills').glob('*/SKILL.md'))
-assert len(skills)==87, len(skills)
+assert len(skills)==108, len(skills)
 for f in skills:
     t=f.read_text(encoding='utf-8')
     assert t.startswith('---\n'), f
@@ -35,7 +35,7 @@ assert len({f.parent.name for f in skills})==len(skills), 'Duplicate skill folde
 for f in skills:
     body=f.read_text(encoding='utf-8')
     assert len(body.split())>=77, f'Skill too short: {f}'
-assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==87, 'Skill catalog incomplete'
+assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==108, 'Skill catalog incomplete'
 for f in p.rglob('*.md'):
     txt=f.read_text(encoding='utf-8')
     assert not re.search(r'(?i)everything[- ]claude[- ]code|\bECC-inspired\b|workshophq|open-search\s+project',txt), f'Stale project or branding reference: {f}'
@@ -91,6 +91,15 @@ for rel in ('references/architecture-connection-impact-playbook.md', 'tools/arch
     assert (p/rel).is_file(), rel
 for rel in ('skills/cto-orchestration/SKILL.md', 'skills/root-cause-debugging/SKILL.md', 'skills/repository-architecture-audit/SKILL.md', 'skills/test-strategy-release-gates/SKILL.md', 'skills/website-qa-auditor/SKILL.md', 'references/skill-routing.md', 'references/quality-gates.md'):
     assert 'architecture-connection-impact-analysis' in (p/rel).read_text(encoding='utf-8'), rel
+
+# SecurityForge v0.12.0: only new specialist skills, no existing SKILL.md rewrites.
+new_security_skills = ["abuse-and-rate-limiting","agentic-orchestrator-security","ai-and-mcp-integration-security","application-threat-modeling","asvs-requirement-mapper","ci-supply-chain-security","cloud-infrastructure-security","cryptography-and-data-protection","dynamic-security-verification","error-handling-and-fail-safe","nz-privacy-compliance","oauth-oidc-and-token-security","remediation-pr-review","secrets-exposure-response","secure-code-analysis","security-audit-orchestrator","security-findings-triage","security-logging-and-alerting","security-regression-test-authoring","web-input-and-resource-security","webhook-and-third-party-integration-security"]
+for slug in new_security_skills:
+    assert (p/'skills'/slug/'SKILL.md').is_file(), slug
+    assert slug in (p/'SKILLS.md').read_text(encoding='utf-8'), slug
+for rel in ('references/securityforge-coverage-matrix.md', 'references/securityforge-findings-and-release-gates.md', 'references/securityforge-evaluation-cases.md', 'tools/securityforge/triage.py', 'tools/securityforge/tests/test_triage.py', 'tools/securityforge/README.md', 'SECURITYFORGE.md'):
+    assert (p/rel).is_file(), rel
+assert 'security-audit-orchestrator' in (p/'references/skill-routing.md').read_text(encoding='utf-8')
 
 print(f'Validated {len(skills)} skills and plugin v{m["version"]}')
 

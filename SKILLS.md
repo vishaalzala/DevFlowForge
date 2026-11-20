@@ -1,6 +1,35 @@
-# DevFlowForge Skill Catalog — 87 skills
+# DevFlowForge Skill Catalog — 108 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
+
+
+## SecurityForge: defensive cybersecurity (21 new skills)
+
+SecurityForge adds focused security checks without changing the existing authorization, architecture, lifecycle or release skills. These are instructions, not live scanners. Select specialists only for relevant tasks.
+
+| Skill | Use when |
+|---|---|
+| [`abuse-and-rate-limiting`](skills/abuse-and-rate-limiting/SKILL.md) | Review throttling, abuse prevention, account enumeration, OTP and service usage budgets |
+| [`agentic-orchestrator-security`](skills/agentic-orchestrator-security/SKILL.md) | Review agent goal integrity, tool permissions, untrusted outputs and memory boundaries |
+| [`ai-and-mcp-integration-security`](skills/ai-and-mcp-integration-security/SKILL.md) | Review MCP and AI connectors, tool trust, scopes, prompt injection and data boundaries |
+| [`application-threat-modeling`](skills/application-threat-modeling/SKILL.md) | Model architecture trust boundaries, threats and security acceptance criteria |
+| [`asvs-requirement-mapper`](skills/asvs-requirement-mapper/SKILL.md) | Map issues and tests to verified OWASP ASVS requirements and assurance levels |
+| [`ci-supply-chain-security`](skills/ci-supply-chain-security/SKILL.md) | Review CI identities, action permissions, provenance, build artifacts and package trust |
+| [`cloud-infrastructure-security`](skills/cloud-infrastructure-security/SKILL.md) | Audit cloud IAM, hosting configurations, environment isolation, storage and network exposure |
+| [`cryptography-and-data-protection`](skills/cryptography-and-data-protection/SKILL.md) | Review cryptographic choices, keys, password hashing and sensitive data protections |
+| [`dynamic-security-verification`](skills/dynamic-security-verification/SKILL.md) | Plan authorized staging-only DAST and evidence-led dynamic security checks |
+| [`error-handling-and-fail-safe`](skills/error-handling-and-fail-safe/SKILL.md) | Review fail-closed permissions, unexpected errors, retries, rollback and error data exposure |
+| [`nz-privacy-compliance`](skills/nz-privacy-compliance/SKILL.md) | Review NZ privacy controls, serious-harm breach assessment and OPC reporting guidance |
+| [`oauth-oidc-and-token-security`](skills/oauth-oidc-and-token-security/SKILL.md) | Review OAuth/OIDC federation, JWT signatures, issuers, audiences, expiry and delegated access |
+| [`remediation-pr-review`](skills/remediation-pr-review/SKILL.md) | Review security remediation PRs, affected architecture, tests and rollback |
+| [`secrets-exposure-response`](skills/secrets-exposure-response/SKILL.md) | Assess exposed tokens, historical secrets, credential rotation and incident coordination |
+| [`secure-code-analysis`](skills/secure-code-analysis/SKILL.md) | Inspect SAST findings, secure code paths, reachability and security fixes |
+| [`security-audit-orchestrator`](skills/security-audit-orchestrator/SKILL.md) | Coordinate comprehensive security audits and evidence-based remediation |
+| [`security-findings-triage`](skills/security-findings-triage/SKILL.md) | Normalize, deduplicate and triage Aikido/SARIF and other security findings |
+| [`security-logging-and-alerting`](skills/security-logging-and-alerting/SKILL.md) | Review security audit trails, alerting, redaction and response ownership |
+| [`security-regression-test-authoring`](skills/security-regression-test-authoring/SKILL.md) | Design positive and negative security regression tests for confirmed vulnerabilities |
+| [`web-input-and-resource-security`](skills/web-input-and-resource-security/SKILL.md) | Review XSS, SSRF, redirects, uploads, path traversal and input sinks |
+| [`webhook-and-third-party-integration-security`](skills/webhook-and-third-party-integration-security/SKILL.md) | Review webhooks, external integrations, signatures, retries, replay and tenant trust |
 
 ## Product and discovery (6)
 

@@ -1,8 +1,8 @@
 {
   "interface": {
     "displayName": "DevFlowForge",
-    "shortDescription": "87 engineering & design skills",
-    "longDescription": "87 reusable engineering and design skills with mandatory architecture impact triage, lifecycle-aware bug investigations across persistence and outputs, scoped regression checks, security and performance guidance. Actual code and browser testing require authorized tools.",
+    "shortDescription": "108 dev and security skills",
+    "longDescription": "108 engineering and design skills with lifecycle debugging, architecture impact mapping, and new SecurityForge defensive cybersecurity reviews for identity, APIs, secrets, supply chain, AI/MCP, privacy and release gates. Scanning and fixes require authorized tools; no automatic production deployment.",
     "developerName": "Vishaal Zala",
     "category": "Productivity",
     "capabilities": [],
@@ -13,8 +13,8 @@
     ]
   },
   "name": "devflowforge",
-  "version": "0.11.1",
-  "description": "87 engineering and design skills with lifecycle debugging and architecture impact checks.",
+  "version": "0.12.0",
+  "description": "108 engineering and design skills, including 21 SecurityForge defensive cybersecurity skills and evidence-driven release checks.",
   "author": {
     "name": "Vishaal Zala"
   },
@@ -37,7 +37,15 @@
     "skill-evaluation",
     "observability",
     "mcp-compatibility",
-    "architecture-impact"
+    "architecture-impact",
+    "data-lifecycle",
+    "regression-diagnostics",
+    "securityforge",
+    "cybersecurity",
+    "secure-development",
+    "asvs",
+    "owasp",
+    "security-triage"
   ],
   "repository": "https://github.com/vishaalzala/devflowforge",
   "license": "MIT",
