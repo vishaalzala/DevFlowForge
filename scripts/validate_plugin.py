@@ -9,7 +9,7 @@ assert re.fullmatch(r'\d+\.\d+\.\d+',m['version'])
 assert re.fullmatch(r'[a-z0-9](?:[a-z0-9.-]{0,62}[a-z0-9])?',m['name'])
 assert len(m['extensions']['com.openai']['interface']['shortDescription'])<=30
 skills=list((p/'skills').glob('*/SKILL.md'))
-assert len(skills)==86, len(skills)
+assert len(skills)==87, len(skills)
 for f in skills:
     t=f.read_text(encoding='utf-8')
     assert t.startswith('---\n'), f
@@ -35,7 +35,7 @@ assert len({f.parent.name for f in skills})==len(skills), 'Duplicate skill folde
 for f in skills:
     body=f.read_text(encoding='utf-8')
     assert len(body.split())>=77, f'Skill too short: {f}'
-assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==86, 'Skill catalog incomplete'
+assert len(re.findall(r'\| \[`[^`]+`\]\(skills/',(p/'SKILLS.md').read_text(encoding='utf-8')))==87, 'Skill catalog incomplete'
 for f in p.rglob('*.md'):
     txt=f.read_text(encoding='utf-8')
     assert not re.search(r'(?i)everything[- ]claude[- ]code|\bECC-inspired\b|workshophq|open-search\s+project',txt), f'Stale project or branding reference: {f}'
@@ -93,3 +93,12 @@ for rel in ('skills/cto-orchestration/SKILL.md', 'skills/root-cause-debugging/SK
     assert 'architecture-connection-impact-analysis' in (p/rel).read_text(encoding='utf-8'), rel
 
 print(f'Validated {len(skills)} skills and plugin v{m["version"]}')
+
+# Lifecycle debug evidence gate (v0.11.1)
+assert (p/'skills/workflow-data-lifecycle-debugging/SKILL.md').is_file()
+assert (p/'references/workflow-data-lifecycle-playbook.md').is_file()
+for name in ('cto-orchestration','root-cause-debugging','architecture-connection-impact-analysis','invoice-job-kit-calculations','pdf-documents-export','test-strategy-release-gates'):
+    assert 'workflow-data-lifecycle-debugging' in (p/'skills'/name/'SKILL.md').read_text(encoding='utf8'), name
+assert 'workflow-data-lifecycle-debugging' in (p/'references/skill-routing.md').read_text(encoding='utf8')
+for rel in ('package.json','src/core.mjs','src/cli.mjs','tests/check.test.mjs','examples/check-only.json','README.md'):
+    assert (p/'tools/workflow-lifecycle-checker'/rel).is_file(), rel

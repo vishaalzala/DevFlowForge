@@ -22,3 +22,6 @@ Read `../../references/quality-gates.md` and apply the relevant project context 
 - No edit silently changes historical amounts.
 
 **Output:** Findings with evidence, proposed or actual change, exact testing status (Pass/Fail/Not run), risk and rollback, and links only to resources actually created. No unsupported claims about production access or running agents.
+
+## Financial lifecycle parity
+For paid/partial/total mismatches, reconcile **authoritative charges, discounts, tax/GST, surcharge, payment allocations, remaining balance, credit/refund/overpayment and currency rounding**, using the project's real business rules. Compare persisted state with the editor, detail view, list badge, **list filters**, PDF, print and actual email attachment. Test genuine partial, fully paid, waived surcharge, overpayment and boundary rounding states. Print/email of a paid/locked invoice should not silently attempt a prohibited financial save; separately verify permitted text/metadata updates. Pair with `workflow-data-lifecycle-debugging` and do not rewrite historical payment records as a display workaround.

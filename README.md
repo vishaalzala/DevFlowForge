@@ -10,9 +10,9 @@
 
 </div>
 
-**DevFlowForge** is an open-source collection of **86 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
+**DevFlowForge** is an open-source collection of **87 independently written, reusable engineering and design skills** for compatible AI coding assistants, created and maintained by **Vishaal Zala**. It works across projects, programming languages and platforms: product discovery, UX/UI design, architecture, implementation, testing, security, performance and delivery.
 
-**Version 0.11.0 · 86 skills · MIT License**
+**Version 0.11.1 · 87 skills · MIT License**
 
 > DevFlowForge is a package of instruction files, not a model, coding agent, Figma integration, browser, deployment service or permission grant. The AI assistant must have the relevant tools and authorisation to implement changes. Skills guide work; they do not guarantee correctness or compliance.
 
@@ -56,6 +56,10 @@ A skill provides a repeatable approach. The assistant reads the real project, us
 - **Backend:** “Use `api-contract-versioning` and `authentication-session-security` to review this integration. Identify breaking changes and negative-access tests.”
 - **AI project:** “Use `prompt-rag-retrieval-evaluation` to define groundedness tests and error slices for a retrieval feature.”
 - **Deployment:** “Use `feature-flags-progressive-rollout` and `ci-cd-release-safety` to prepare a staged rollout, monitoring and rollback plan.”
+
+## Lifecycle-aware investigation
+
+For missing saved fields, mismatched invoice totals/status, lost conversion data, duplicate writes or print/email/PDF inconsistencies, use `workflow-data-lifecycle-debugging`. It traces the first divergence across UI state, save/autosave, API, persistence, refresh and downstream outputs. "Check" means report only; "fix and test" permits scoped branch-level changes, never automatic production deployment. The optional offline report checker validates evidence-report structure, not application behavior.
 
 ## Testing-first development workflow
 

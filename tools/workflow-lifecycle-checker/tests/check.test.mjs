@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { validateReport } from '../src/core.mjs';
+const fixture = JSON.parse(readFileSync(new URL('../examples/check-only.json', import.meta.url)));
+const clone = () => structuredClone(fixture);
+test('valid investigation-only report with explicit Not run entries passes', () => assert.equal(validateReport(clone()).ok, true));
+test('missing stage is rejected', () => { const r=clone(); r.stages.pop(); assert.match(validateReport(r).errors.join(' '), /missing lifecycle stage/); });
+test('missing stage evidence is rejected', () => { const r=clone(); r.stages[1].evidence=''; assert.equal(validateReport(r).ok,false); });
+test('unknown or duplicated stages are rejected', () => { const r=clone(); r.stages[0].name='reload'; assert.match(validateReport(r).errors.join(' '), /duplicate stage/); });
+test('check-only cannot claim edits', () => { const r=clone(); r.changedFiles=['src/demo.ts']; assert.match(validateReport(r).errors.join(' '), /check-only/); });
+test('check-only cannot claim release-ready', () => { const r=clone(); r.ready=true; assert.equal(validateReport(r).ok,false); });
+test('fix cannot claim ready if stage unverified', () => { const r=clone(); r.mode='fix'; r.ready=true; r.tests=[{status:'Pass',evidence:'test:pass'}]; r.consumers[0].testStatus='Pass'; assert.equal(validateReport(r).ok,false); });
+test('fix cannot claim ready if consumer unverified', () => { const r=clone(); r.mode='fix'; r.ready=true; r.tests=[{status:'Pass',evidence:'test:pass'}]; r.stages.forEach(s=>{s.status='Pass';s.evidence='synthetic proof';}); assert.equal(validateReport(r).ok,false); });
+test('fix ready requires test evidence', () => { const r=clone(); r.mode='fix'; r.ready=true; r.tests=[{status:'Pass',evidence:''}]; r.stages.forEach(s=>{s.status='Pass';s.evidence='synthetic proof';}); r.consumers[0].testStatus='Pass'; assert.equal(validateReport(r).ok,false); });
+test('complete synthetic fix report passes structural rules', () => { const r=clone(); r.mode='fix'; r.ready=true; r.changedFiles=['src/demo.ts']; r.tests=[{status:'Pass',evidence:'Synthetic integration test command and fixture'}]; r.stages.forEach(s=>{s.status='Pass';s.evidence='Synthetic-stage evidence';}); r.consumers[0].testStatus='Pass'; assert.equal(validateReport(r).ok,true); });
+test('report must be object', () => assert.equal(validateReport(null).ok,false));

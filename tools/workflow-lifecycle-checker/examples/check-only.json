@@ -1,0 +1,22 @@
+{
+  "mode": "check",
+  "environment": "synthetic-staging-fixture",
+  "symptom": "A saved numeric value appears blank after reopening a document",
+  "expected": "The saved zero should be visible",
+  "actual": "The editor shows an empty field",
+  "connectionClass": "Connected",
+  "firstDivergence": "The editor's initial-value projection omits a zero value; illustrative, not verified project evidence",
+  "stages": [
+    {"name":"input","status":"Pass","evidence":"Synthetic fixture set to numeric zero"},
+    {"name":"state","status":"Fail","evidence":"Synthetic example renderer coerces zero into empty string"},
+    {"name":"save","status":"Not run","evidence":"No writes in check mode"},
+    {"name":"api","status":"Not run","evidence":"No API fixture executed"},
+    {"name":"database","status":"Not run","evidence":"No database accessed"},
+    {"name":"reload","status":"Not run","evidence":"Reopen test not executed"},
+    {"name":"outputs","status":"Not applicable","evidence":"No PDF or downstream output in this fixture"}
+  ],
+  "consumers": [{"name":"editor","testStatus":"Not run","evidence":"Requires controlled staging test"}],
+  "tests": [],
+  "changedFiles": [],
+  "ready": false
+}

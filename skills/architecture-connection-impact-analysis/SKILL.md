@@ -26,3 +26,6 @@ description: Use when a bug or feature crosses connected routes, selectors, shar
 **Example:** A shared record selector is empty on three document-entry pages. Inspect the selector and its caller props, API filtering, customer relationship, authorization policy and persistence, then check other consumers and conversion flows. Fix the responsible shared layer if evidence supports it; test the three pages, older records and wrong-tenant access without modifying production data.
 
 **Limits:** Never describe a planned connection or unrun test as confirmed. Respect investigation-only or design-only scope and obtain separate approval before edits, merge, deployment or irreversible operations.
+
+## Connected lifecycle and representation impact
+For persisted-value, financial-state or document problems, map each field from producer and UI state through API, stored record, refresh, conversions and all confirmed consumers (list badges/filters, PDFs, print, email attachments, ledger and background jobs). Record the first source-grounded divergence and mark uninspected paths. Use `workflow-data-lifecycle-debugging` for stage-by-stage evidence, and never assume a shared PDF model contains every saved field. Include tests of old/new records and paid/locked-state restrictions in the impact matrix. Limit edits to proved impacted owners.

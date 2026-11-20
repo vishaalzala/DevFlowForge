@@ -1,4 +1,4 @@
-# DevFlowForge Skill Catalog — 86 skills
+# DevFlowForge Skill Catalog — 87 skills
 
 Each row links to a self-contained instruction file. Activate the smallest number required for the actual task. See [skill routing](references/skill-routing.md).
 
@@ -51,7 +51,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`offline-first-sync`](skills/offline-first-sync/SKILL.md) | Use when planning a PWA or desktop app that allows offline work, local caching, conflict resolution and eventual synchronization |
 | [`pdf-documents-export`](skills/pdf-documents-export/SKILL.md) | Use when generating printable quotes, invoices, statements, service records, repair reports or branded PDFs and exports |
 
-## Architecture, coding and test (17)
+## Architecture, coding and test (18)
 
 | Skill | Use when |
 |---|---|
@@ -61,6 +61,7 @@ Each row links to a self-contained instruction file. Activate the smallest numbe
 | [`repository-architecture-audit`](skills/repository-architecture-audit/SKILL.md) | Use when auditing an existing repository, mapping architecture, locating module ownership, detecting duplicated logic or planning a significant refactor |
 | [`architecture-decisions-tradeoffs`](skills/architecture-decisions-tradeoffs/SKILL.md) | Use when evaluating technology choices, architecture alternatives, scalability, migration paths, or documenting an architecture decision record |
 | [`root-cause-debugging`](skills/root-cause-debugging/SKILL.md) | Use for recurring bugs, UI errors, failed saves, 404s, duplicate inserts, email failures, unexpected permissions, or any request to trace and permanently fix a code defect |
+| [`workflow-data-lifecycle-debugging`](skills/workflow-data-lifecycle-debugging/SKILL.md) | Use when saved fields, statuses, totals, conversions, list filters, generated PDFs, print/email attachments or duplicate writes disagree across a record lifecycle; investigate the first divergence and verify affected consumers |
 | [`safe-implementation-review`](skills/safe-implementation-review/SKILL.md) | Use when asked to implement a feature or fix, review or merge a GitHub PR, assess a diff, write tests, safely modify production-facing software, or confirm readiness to ship |
 | [`unit-integration-e2e-testing`](skills/unit-integration-e2e-testing/SKILL.md) | Use when designing or implementing unit, integration, contract or end-to-end tests for features, regressions, APIs and multi-tenant flows |
 | [`test-driven-development`](skills/test-driven-development/SKILL.md) | Use for behavior changes, bug fixes and feature development where failing tests should precede code changes (Red-Green-Refactor) |
