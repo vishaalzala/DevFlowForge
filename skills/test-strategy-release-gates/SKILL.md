@@ -21,3 +21,6 @@ Treat 'all tests passed' as an evidenced claim, not a promise. Match the gates t
 9. After functional and automated verification, offer an *optional* authorized penetration-test readiness review when the app has exposed surfaces or sensitive data. Do not run scans without explicit consent. For low-risk or documentation work, note security testing is not needed.
 
 **Output:** A risk-based test matrix, evidenced results, unresolved gaps, go/no-go recommendation, and clearly separated optional security-testing handoff.
+
+## Lifecycle representation release check
+For any change involving persistence or business outputs, include a tested matrix of applicable **initial value, Save/autosave, navigation away, refresh/reopen, API/DB stored value, conversion, list/badge/filter and generated PDF/actual email attachment**. Include `0`, blank and nonzero values where field semantics require them; test financial lock states and server-side idempotency with disposable fixtures. Compare the tested matrix to `workflow-data-lifecycle-debugging` impact evidence. Report Pass / Fail / Not run / Not applicable for each relevant consumer; Not run never counts as success.

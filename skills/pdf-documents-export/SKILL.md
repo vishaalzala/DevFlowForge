@@ -22,3 +22,6 @@ Read `../../references/quality-gates.md` and apply the relevant project context 
 - Output tested on multiple pages.
 
 **Output:** Findings with evidence, proposed or actual change, exact testing status (Pass/Fail/Not run), risk and rollback, and links only to resources actually created. No unsupported claims about production access or running agents.
+
+## Saved-field and delivery parity
+For an omitted PO/order number, odometer or other field, trace input name -> persisted column -> API/export projection -> shared PDF model -> template -> generated artifact. Verify print/download content and the **actual PDF attached to the outgoing email**, not just two model previews. Compare artifact contents/hashes on synthetic records and ensure both actions do not mutate paid/locked documents. Use `workflow-data-lifecycle-debugging` when fields disappear after saving, reopening or converting a document.

@@ -17,3 +17,8 @@ Read `../../references/projects.md` and `../../references/quality-gates.md` for 
 8. Finish with 'What was found / What changed / What was tested / What remains'. Use gates in `../../references/quality-gates.md` and never say 'fixed' without actual verification.
 
 Avoid unbounded full-codebase edits; prioritize impact. For ambiguous repo identity, resolve through tools; ask just one targeted question only when truly blocked. Respect external tool-specific skill instructions.
+
+## Explicit user-intent routing for defect requests
+- "Check / investigate / audit this issue" is **read-only**: inspect authorized code/logs, safely reproduce with synthetic fixtures, map lifecycle and consumers, report findings and Not run areas; do not edit code or submit a fix PR.
+- "Fix / implement and test this issue" authorizes **scoped branch-level code changes and tests** after evidence-backed investigation; PR preparation is allowed. It does not authorize production data changes, merging, sensitive financial/permission migrations or deployment.
+- When fields, paid status, totals, filters, conversions, invoices, PDFs, print/email or duplicate writes disagree, activate `workflow-data-lifecycle-debugging` as the owner of stage-by-stage value tracing; use architecture mapping for connection scope, document/financial specialists for rules, and release gates for evidence.

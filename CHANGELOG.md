@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1] - 2026-11-20
+- Added `workflow-data-lifecycle-debugging` (86 to 87 skills) for persisted field, financial-state, conversion, PDF/print/email parity and duplicate-write investigations.
+- Expanded root-cause debugging, architecture impact, financial/PDF specialists, CTO orchestration and release gates with explicit read-only "check" versus scoped "fix and test" intent.
+- Added reusable synthetic lifecycle regression matrix and offline evidence-report checker with deterministic unit tests and GitHub CI integration. It cannot inspect live systems or prove test execution.
+- No customer application, database, production deployment or workspace plugin release changed.
+
+
 ## [0.11.0] - 2026-11-11
 - Added `architecture-connection-impact-analysis` (85 → 86 skills), a required Connected/Isolated triage for existing-project engineering tasks and evidence-based upstream/downstream dependency mapping.
 - Updated CTO orchestration, onboarding, architecture audit, debugging, implementation review and test-release gates to check shared callers, data contracts, tenant/role permissions, consumers, conversions and side effects before proposed fixes.

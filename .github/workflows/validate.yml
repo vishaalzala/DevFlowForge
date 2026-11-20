@@ -38,3 +38,7 @@ jobs:
         run: npm --prefix tools/architecture-impact-checker test
       - name: Architecture impact fixture validation
         run: node tools/architecture-impact-checker/src/cli.mjs --input tools/architecture-impact-checker/examples/connected-release.json
+      - name: Lifecycle report checker unit tests
+        run: npm --prefix tools/workflow-lifecycle-checker test
+      - name: Validate synthetic check-only lifecycle report
+        run: node tools/workflow-lifecycle-checker/src/cli.mjs --input tools/workflow-lifecycle-checker/examples/check-only.json

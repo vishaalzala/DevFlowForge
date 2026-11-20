@@ -14,3 +14,6 @@ description: Use for recurring bugs, UI errors, failed saves, 404s, duplicate in
 7. Report: symptom, evidence, root cause, changed files, before/after behavior, tests run/results and unresolved issues. Do not claim access or tests that did not happen.
 
 If the user says 'still same issue', compare evidence to earlier attempted fixes rather than repeating the same guess.
+
+## Connected data-lifecycle issue gate
+When a persisted field, status, monetary amount, document, conversion or output disagrees across surfaces, also activate `workflow-data-lifecycle-debugging` and `../../references/workflow-data-lifecycle-playbook.md`. Locate the **first divergent value** through initial value -> frontend state -> save/autosave -> API -> database -> reopened record -> each relevant output. Verify zero/blank/null behavior, paid/locked document actions, filters, duplicate requests and real print/email attachments as relevant. A passing screen does not prove persistence or the attached PDF is correct. For "check this issue" investigate only: no code changes.
